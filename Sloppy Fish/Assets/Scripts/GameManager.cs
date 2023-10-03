@@ -10,13 +10,14 @@ public class GameManager : MonoBehaviour
     public GameObject playButton;
     public GameObject gameOver;
     public GameObject title;
-
+    public GameObject startui;
     private int score = 0;
 
     private void Awake()
     {
         Application.targetFrameRate = 60;
         gameOver.SetActive(false);
+        startui.SetActive(true);
         title.SetActive(true);
         Pause();
     }
