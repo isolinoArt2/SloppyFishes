@@ -6,12 +6,14 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public Player player;
+    public GameObject _player;
     public Text scoreText;
     public GameObject playButton;
     public GameObject gameOver;
     public GameObject title;
     public GameObject startui;
     private int score = 0;
+    public Spawner _spawner;
 
     private void Awake()
     {
@@ -20,6 +22,7 @@ public class GameManager : MonoBehaviour
         startui.SetActive(true);
         title.SetActive(true);
         Pause();
+        _player.SetActive(false);
     }
 
     public void Play()
@@ -53,6 +56,7 @@ public class GameManager : MonoBehaviour
     {
         gameOver.SetActive(true);
         playButton.SetActive(true);
+        _spawner.GetComponent<Spawner>().ResetTimer();
 
         Pause();
     }

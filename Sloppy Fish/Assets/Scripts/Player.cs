@@ -11,12 +11,12 @@ public class Player : MonoBehaviour
 
     [SerializeField] private AudioSource jumpSoundEffect;
 
-    private GameManager gameManager; // Reference to the GameManager
+    public GameManager gameManager; // Reference to the GameManager
 
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        gameManager = FindObjectOfType<GameManager>(); // Find and store the GameManager reference
+     //   gameManager = FindObjectOfType<GameManager>(); // Find and store the GameManager reference
     }
 
     private void Start()

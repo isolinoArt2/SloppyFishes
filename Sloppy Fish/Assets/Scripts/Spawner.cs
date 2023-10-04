@@ -1,47 +1,68 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    public GameObject prefab;
-    public float initialSpawnRate = 1f;
-    public float minHeight = -2f;
-    public float maxHeight = 2f;
-    public float timeToIncreaseRate = 10.0f;  // Cada cu�ntos segundos aumentar la velocidad.
-    public float increaseRateAmount = 0.1f;  // Cu�nto aumentar la velocidad cada vez.
+    public List<GameObject> prefabs; // Lista de prefabs inicial
+    public List<GameObject> prefabs1; // Lista de prefabs inicial
+    public List<GameObject> prefabs2; // Lista de prefabs para la segunda etapa
+    public List<GameObject> prefabs3; // Lista de prefabs para la tercera etapa
+    public List<Transform> spawnpoints; // Lista de puntos de spawn
+    public float tiempoEntreInstancias = 2f; // Tiempo en segundos entre cada instancia
 
-    private float spawnRate;
-    private float spawnRateTimer;
+    private float playingTime = 0f; // Tiempo transcurrido desde el inicio del juego
 
-    private void OnEnable()
+    private void Start()
     {
-        spawnRate = initialSpawnRate;
-        spawnRateTimer = spawnRate;
-        InvokeRepeating("Spawn", 0f, spawnRate);
-    }
-
-    private void OnDisable()
-    {
-        CancelInvoke("Spawn");
+        // Comenzar a invocar la función Spawn() cada tiempoEntreInstancias segundos
+        InvokeRepeating("Spawn", 0f, tiempoEntreInstancias);
+        prefabs = prefabs1;
     }
 
     private void Update()
     {
-        // Incrementa el temporizador de velocidad de spawn.
-        spawnRateTimer -= Time.deltaTime;
+        // Actualizar el tiempo de juego
+        playingTime += Time.deltaTime;
 
-        // Si ha pasado el tiempo para aumentar la velocidad, aumenta la velocidad y reinicia el temporizador.
-        if (spawnRateTimer <= 0)
+        // Verificar la dificultad y cambiar las listas de prefabs
+        if (playingTime > 30f && playingTime <= 60f)
         {
-            spawnRate += increaseRateAmount;  // Aumenta la velocidad de spawn.
-            spawnRateTimer = timeToIncreaseRate;  // Reinicia el temporizador.
-            CancelInvoke("Spawn");  // Cancela la invocaci�n anterior.
-            InvokeRepeating("Spawn", 0f, spawnRate);  // Vuelve a invocar con la nueva velocidad.
+            // Cambiar a la lista de prefabs2
+            prefabs = prefabs2;
+           // Debug.Log("segundo nivel");
         }
+        else if (playingTime > 60f)
+        {
+            // Cambiar a la lista de prefabs3
+            prefabs = prefabs3;
+           // Debug.Log("segundo nivel");
+        }
+    }
+    public void ResetTimer()
+    {
+        playingTime = 0;
+      //  Debug.Log("reset timer");
     }
 
     private void Spawn()
     {
-        Vector3 spawnPosition = transform.position + Vector3.up * Random.Range(minHeight, maxHeight);
-        Instantiate(prefab, spawnPosition, Quaternion.identity);
+        // Verificar si las listas están vacías
+        if (prefabs.Count == 0 || spawnpoints.Count == 0)
+        {
+            Debug.LogWarning("La lista de prefabs o la lista de spawnpoints está vacía.");
+            return;
+        }
+
+        // Seleccionar un prefab aleatorio de la lista actual
+        int indicePrefabAleatorio = Random.Range(0, prefabs.Count);
+        GameObject prefabSeleccionado = prefabs[indicePrefabAleatorio];
+
+        // Seleccionar un punto de spawn aleatorio de la lista
+        int indiceSpawnAleatorio = Random.Range(0, spawnpoints.Count);
+        Transform puntoSpawnSeleccionado = spawnpoints[indiceSpawnAleatorio];
+
+        // Instanciar el prefab en la posición del punto de spawn seleccionado
+        Instantiate(prefabSeleccionado, puntoSpawnSeleccionado.position, puntoSpawnSeleccionado.rotation);
     }
 }
