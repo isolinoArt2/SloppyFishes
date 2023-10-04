@@ -491,7 +491,7 @@ MonoBehaviour:
   - {fileID: 1836185180}
   - {fileID: 1681717737}
   - {fileID: 1239522419}
-  tiempoEntreInstancias: 2
+  tiempoEntreInstancias: 1
 --- !u!1 &497781000
 GameObject:
   m_ObjectHideFlags: 0
@@ -1673,7 +1673,8 @@ Transform:
   m_LocalPosition: {x: -1.28, y: 0, z: 0}
   m_LocalScale: {x: 0.725, y: 0.725, z: 0.725}
   m_ConstrainProportionsScale: 1
-  m_Children: []
+  m_Children:
+  - {fileID: 2079073980}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &1043902194
@@ -1758,6 +1759,12 @@ MonoBehaviour:
   - {fileID: 21300000, guid: b55aa666ad6da7a48b2f36cb0256bb35, type: 3}
   gravity: -13
   strength: 5
+  bubblePrefabs:
+  - {fileID: 6310034648827079837, guid: 50549da98bb3249b3803fb7acbef66d8, type: 3}
+  - {fileID: 6310034648827079837, guid: 810637f3384764b2d9f2e7d98885146d, type: 3}
+  - {fileID: 6310034648827079837, guid: afb8c026648d245068bbd48cc8cc39a4, type: 3}
+  - {fileID: 6310034648827079837, guid: 76dc1878f5e8c458a8e6e716a7101eb4, type: 3}
+  bubbleSpawnPoint: {fileID: 2079073980}
   jumpSoundEffect: {fileID: 1043902197}
   gameManager: {fileID: 744118049}
 --- !u!82 &1043902197
@@ -2423,6 +2430,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animationSpeed: 0.1
+--- !u!1 &2079073979
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2079073980}
+  m_Layer: 0
+  m_Name: bubblePos
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2079073980
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2079073979}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.14, y: -0.262, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1043902193}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2089233216
 GameObject:
   m_ObjectHideFlags: 0

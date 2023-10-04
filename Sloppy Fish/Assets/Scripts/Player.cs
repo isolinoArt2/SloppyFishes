@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -8,6 +9,9 @@ public class Player : MonoBehaviour
     private Vector3 direction;
     public float gravity = -9.8f;
     public float strength = 5f;
+
+    public List<GameObject> bubblePrefabs; // Lista de prefabs de burbujas
+    public Transform bubbleSpawnPoint; // Punto de spawn de las burbujas
 
     [SerializeField] private AudioSource jumpSoundEffect;
 
@@ -38,6 +42,7 @@ public class Player : MonoBehaviour
         {
             jumpSoundEffect.Play();
             direction = Vector3.up * strength;
+            BubbleSpawn();
         }
 
         direction.y += gravity * Time.deltaTime;
@@ -67,6 +72,30 @@ public class Player : MonoBehaviour
         else if (other.gameObject.CompareTag("Scoring"))
         {
             gameManager.IncreaseScore(); // Call the GameManager's IncreaseScore method through the reference
+        }
+    }
+
+    public void BubbleSpawn()
+    {
+        // Verificar si la lista de burbujas está vacía
+        if (bubblePrefabs.Count == 0)
+        {
+            Debug.LogWarning("La lista de bubblePrefabs está vacía.");
+            return;
+        }
+
+        // Seleccionar un prefab de burbuja aleatorio de la lista
+        int indicePrefabAleatorio = Random.Range(0, bubblePrefabs.Count);
+        GameObject prefabSeleccionado = bubblePrefabs[indicePrefabAleatorio];
+
+        // Instanciar el prefab de burbuja en el punto de spawn
+        if (bubbleSpawnPoint != null)
+        {
+            Instantiate(prefabSeleccionado, bubbleSpawnPoint.position, bubbleSpawnPoint.rotation);
+        }
+        else
+        {
+            Debug.LogWarning("El punto de spawn de burbujas (bubbleSpawnPoint) no está asignado en el Inspector.");
         }
     }
 }
