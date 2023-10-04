@@ -5,13 +5,8 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/SloppyFish.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 0
-    path: Assets/Sloppyfish_V01.unity
-    guid: a03b9112e56ca474a9526d0a016852fa
   - enabled: 1
     path: Assets/2Sloppyfish_V01.unity
     guid: eae69a6aaef6b7d45b5174b88025bf14
   m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0
