@@ -1760,10 +1760,13 @@ MonoBehaviour:
   gravity: -13
   strength: 5
   bubblePrefabs:
-  - {fileID: 6310034648827079837, guid: 50549da98bb3249b3803fb7acbef66d8, type: 3}
-  - {fileID: 6310034648827079837, guid: 810637f3384764b2d9f2e7d98885146d, type: 3}
-  - {fileID: 6310034648827079837, guid: afb8c026648d245068bbd48cc8cc39a4, type: 3}
-  - {fileID: 6310034648827079837, guid: 76dc1878f5e8c458a8e6e716a7101eb4, type: 3}
+  - {fileID: 4247808812689562732, guid: ecaeb96503c5c904a822bba7a0a9ba65, type: 3}
+  - {fileID: 8038196765791529692, guid: 4012065ca86ce8d4784353813d0c99ba, type: 3}
+  - {fileID: 7944137551584641624, guid: 3dc279e7e51893149b89e7102d7dec50, type: 3}
+  - {fileID: 3282182428937756321, guid: 4ff11db8be8bc08478a0a276b3d246a7, type: 3}
+  - {fileID: 4247808812689562732, guid: b1e66cb6ae46d45468d6e1b83cecb3d4, type: 3}
+  - {fileID: 4247808812689562732, guid: b1e66cb6ae46d45468d6e1b83cecb3d4, type: 3}
+  - {fileID: 4247808812689562732, guid: b1e66cb6ae46d45468d6e1b83cecb3d4, type: 3}
   bubbleSpawnPoint: {fileID: 2079073980}
   jumpSoundEffect: {fileID: 1043902197}
   gameManager: {fileID: 744118049}
