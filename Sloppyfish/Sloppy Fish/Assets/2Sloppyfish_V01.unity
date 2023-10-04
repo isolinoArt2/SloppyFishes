@@ -1794,7 +1794,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: d84528054c9780243a55cb5ee6f6f4be, type: 3}
   - {fileID: 21300000, guid: b55aa666ad6da7a48b2f36cb0256bb35, type: 3}
   gravity: -13
-  strength: 4
+  strength: 4.3
   bubblePrefabs:
   - {fileID: 4247808812689562732, guid: ecaeb96503c5c904a822bba7a0a9ba65, type: 3}
   - {fileID: 8038196765791529692, guid: 4012065ca86ce8d4784353813d0c99ba, type: 3}
