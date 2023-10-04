@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "736249224303",
+    "project_id": "sloppyfish-5700e",
+    "storage_bucket": "sloppyfish-5700e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:736249224303:android:e1368f55a4918843a9419a",
+        "android_client_info": {
+          "package_name": "com.SloppyStudios.SloppyFish"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQGZTwtGJEUbjRLUZNtdAbkf-hgsOJi8I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
