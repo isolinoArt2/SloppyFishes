@@ -24,9 +24,9 @@ public class DataManager : MonoBehaviour
     // public GameObject errorsText;
     string authCode;
 
-    //public int sceneIndex;
+    public int sceneIndex;
 
-   // public UnityEngine.UIElements.Slider slider;
+    public UnityEngine.UIElements.Slider slider;
  //   public TextMeshProUGUI progressText;
 
     // data base
@@ -114,6 +114,7 @@ public class DataManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        DontDestroyOnLoad(this.gameObject);
         isConnected = false;
         PlayGamesPlatform.Activate();
         GPGSLogin();
@@ -176,7 +177,7 @@ public class DataManager : MonoBehaviour
                     firebaseStatusText.text = "signed in as " + user.DisplayName;
                     _userId.text = user.DisplayName;
                     isConnected = true;
-                  //  StartCoroutine(LoadScene());
+                   StartCoroutine(LoadScene());
                 }
                 else
                 {
@@ -187,7 +188,7 @@ public class DataManager : MonoBehaviour
         });
     }
 
-    /*
+    
     IEnumerator LoadScene()
     {
 
@@ -199,10 +200,10 @@ public class DataManager : MonoBehaviour
             float progress = Mathf.Clamp01(operation.progress / .9f);
 
             slider.value = progress;
-            progressText.text = progress * 100f + "%";
+            //progressText.text = progress * 100f + "%";
 
             yield return null;
         }
     }
-    */
+    
 }
