@@ -6,6 +6,7 @@ using GooglePlayGames.BasicApi;
 using UnityEngine.SocialPlatforms;
 using System.Threading;
 using UnityEngine.UI;
+
 using Firebase.Firestore;
 using Firebase.Extensions;
 using System;
@@ -18,16 +19,24 @@ using TMPro;
 
 public class DataManager : MonoBehaviour
 {
-    public Text gpgsStatustext;
-    public Text firebaseStatusText;
-    public Text _userId;
+   // public Text gpgsStatustext;
+   // public Text firebaseStatusText;
+    //public Text _userId;
+    private string _userId;
+
+    public GameObject LoadingScreen;
+    public GameObject Gamemanager;
     // public GameObject errorsText;
     string authCode;
 
-    public int sceneIndex;
+   // public int sceneIndex;
 
     public UnityEngine.UIElements.Slider slider;
- //   public TextMeshProUGUI progressText;
+    //   public TextMeshProUGUI progressText;
+
+  //  public Text leaderboardText; // El Text donde mostrarás la tabla de clasificación
+    public Transform scoreElementsContainer;
+    public ScoreElement scoreElementPrefab; // Asigna tu prefab de ScoreElement en el Inspector de Unity
 
     // data base
 
@@ -38,28 +47,31 @@ public class DataManager : MonoBehaviour
     bool isConnected;
     //public Text SaveLog, LoadLog;
 
-    // public Text nameLbl, coinlbl, inv1Lbl, inv2Lbl, inv3Lbl;
+     private Text nameLbl, Highscorelbl;
+    private void Awake()
+    {
+        LoadingScreen.SetActive(true);
+       // LoadData();
+    }
+    
 
     public void LoadData()
     {
         if (isConnected)
         {
             FirebaseFirestore db = FirebaseFirestore.DefaultInstance;
-            DocumentReference DocRef = db.Collection("DokkoPlayerData").Document(userID);
+            DocumentReference DocRef = db.Collection("FishPlayerData").Document(userID);
             DocRef.GetSnapshotAsync().ContinueWithOnMainThread(task =>
             {
                 DocumentSnapshot snapshot = task.Result;
                 if (snapshot.Exists)
-                {/*
+                {
                     nameLbl.text = snapshot.GetValue<string>("playerName");
-                    coinlbl.text = snapshot.GetValue<int>("playerCoins").ToString();
+                    Highscorelbl.text = snapshot.GetValue<int>("playerHighScore").ToString();
 
-                    List<string> invList = snapshot.GetValue<List < string >> ("playerInventory");
-                    inv1Lbl.text = invList[0];
-                    inv2Lbl.text = invList[1];
-                    inv3Lbl.text = invList[2];
+                    
 
-                    */
+                    
                 }
                 else
                 {
@@ -76,16 +88,22 @@ public class DataManager : MonoBehaviour
 
     public void SaveData()
     {
+        //Debug.Log("save data entra");
         if (isConnected)
         {
             FirebaseFirestore db = FirebaseFirestore.DefaultInstance;
+
+           // string playerName = _userId.text;
+            string playerName = _userId;
+            int playerScore = PlayerPrefs.GetInt("highScore");
            
             Dictionary<string, object> saveValues = new Dictionary<string, object>
             {
-                
+                {"playerName",playerName },
+                {"playerHighScore",playerScore },
             };
             //esta collection guarda todos los documentos de datos de nuestros usuarios
-            DocumentReference docRef = db.Collection("DokkoPlayerData").Document(userID);
+            DocumentReference docRef = db.Collection("FishPlayerData").Document(userID);
             //ahora guardamos los valores del diccionario en la coleccion
             docRef.SetAsync(saveValues).ContinueWithOnMainThread(task =>
             {
@@ -118,6 +136,7 @@ public class DataManager : MonoBehaviour
         isConnected = false;
         PlayGamesPlatform.Activate();
         GPGSLogin();
+        LoadData();
     }
 
 
@@ -129,7 +148,7 @@ public class DataManager : MonoBehaviour
             if (success == SignInStatus.Success)
             {
                 //loged in to gpgs
-                gpgsStatustext.text = "logged in";
+                //gpgsStatustext.text = "logged in";
                 Firebase.FirebaseApp.CheckAndFixDependenciesAsync().ContinueWithOnMainThread(task =>
                 {
                     if (task.Result == Firebase.DependencyStatus.Available)
@@ -140,7 +159,7 @@ public class DataManager : MonoBehaviour
                     else
                     {
                         //error fixing firebase dependencies
-                        firebaseStatusText.text = "Dependency error";
+                      //  firebaseStatusText.text = "Dependency error";
                     }
                 });
 
@@ -150,11 +169,11 @@ public class DataManager : MonoBehaviour
 
     void ConnectToFirebase()
     {
-        firebaseStatusText.text = "try to connect";
+      //  firebaseStatusText.text = "try to connect";
         PlayGamesPlatform.Instance.RequestServerSideAccess(true, code =>
         {
             authCode = code;
-            firebaseStatusText.text = "authcode " + authCode;
+           // firebaseStatusText.text = "authcode " + authCode;
 
             Firebase.Auth.FirebaseAuth FBauth = Firebase.Auth.FirebaseAuth.DefaultInstance;
             Firebase.Auth.Credential FBcred = Firebase.Auth.PlayGamesAuthProvider.GetCredential(authCode);
@@ -162,21 +181,23 @@ public class DataManager : MonoBehaviour
             {
                 if (task.IsCanceled)
                 {
-                    firebaseStatusText.text = "sign in canceled";
+                  //  firebaseStatusText.text = "sign in canceled";
 
                 }
                 if (task.IsFaulted)
                 {
-                    firebaseStatusText.text = "error :: " + task.Result;
+                  //  firebaseStatusText.text = "error :: " + task.Result;
                 }
 
                 Firebase.Auth.FirebaseUser user = FBauth.CurrentUser;
                 if (user != null)
                 {
                     userID = user.UserId;
-                    firebaseStatusText.text = "signed in as " + user.DisplayName;
-                    _userId.text = user.DisplayName;
+                 //   firebaseStatusText.text = "signed in as " + user.DisplayName;
+                    _userId = user.DisplayName;
                     isConnected = true;
+
+                   // ffReference = FirebaseFirestore.DefaultInstance;
                    StartCoroutine(LoadScene());
                 }
                 else
@@ -191,6 +212,7 @@ public class DataManager : MonoBehaviour
     
     IEnumerator LoadScene()
     {
+        /*
 
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
 
@@ -204,6 +226,65 @@ public class DataManager : MonoBehaviour
 
             yield return null;
         }
+        */
+        SaveData();
+        LoadingScreen.SetActive(false);
+        Gamemanager.SetActive(true);
+        yield return null;
     }
-    
+
+    public void LoadLeaderboard()
+    {
+        if (isConnected)
+        {
+            FirebaseFirestore db = FirebaseFirestore.DefaultInstance;
+            CollectionReference playersRef = db.Collection("FishPlayerData");
+
+            // Consulta los datos de los líderes y ordénalos por puntuación en orden ascendente
+            Query query = playersRef.OrderBy("playerHighScore").Limit(10);
+
+            query.GetSnapshotAsync().ContinueWithOnMainThread(task =>
+            {
+                if (task.IsCompleted)
+                {
+                    QuerySnapshot snapshot = task.Result;
+
+                    // Elimina las instancias existentes de ScoreElement en el contenedor
+                    foreach (Transform child in scoreElementsContainer)
+                    {
+                        Destroy(child.gameObject);
+                    }
+
+                    List<ScoreElement> scoreElements = new List<ScoreElement>();
+
+                    foreach (DocumentSnapshot doc in snapshot.Documents)
+                    {
+                        string playerName = doc.GetValue<string>("playerName");
+                        int playerScore = doc.GetValue<int>("playerHighScore");
+
+                        // Crea una instancia de ScoreElement y configura los datos
+                        ScoreElement scoreElement = Instantiate(scoreElementPrefab, scoreElementsContainer);
+                        scoreElement.NewScoreElement(playerName, playerScore);
+
+                        // Agrega el ScoreElement a la lista
+                        scoreElements.Add(scoreElement);
+                    }
+
+                    // Invierte la lista para obtener el orden descendente
+                    scoreElements.Reverse();
+
+                    // Reorganiza las instancias en el contenedor
+                    foreach (var scoreElement in scoreElements)
+                    {
+                        scoreElement.transform.SetAsLastSibling();
+                    }
+                }
+            });
+        }
+        else
+        {
+            // Firebase no está conectado
+        }
+    }
+
 }

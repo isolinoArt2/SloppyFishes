@@ -17,6 +17,9 @@ public class GameManager : MonoBehaviour
     public GameObject soundMute;
     public GameObject spawnerObjt;
 
+    public GameObject datamanager;
+
+    private int highscore;
     private void Awake()
     {
         Application.targetFrameRate = 60;
@@ -33,6 +36,7 @@ public class GameManager : MonoBehaviour
     {
         FindObjectOfType<AudioManager>().Play("music");
         FindObjectOfType<AudioManager>().Play("title");
+        highscore = PlayerPrefs.GetInt("highScore");
     }
 
     [System.Obsolete]
@@ -69,6 +73,13 @@ public class GameManager : MonoBehaviour
     [System.Obsolete]
     public void GameOver()
     {
+        if (PlayerPrefs.GetInt("score") > highscore)
+        {
+            PlayerPrefs.SetInt("highScore", PlayerPrefs.GetInt("score"));
+
+
+        }
+        datamanager.SendMessage("SaveData");
         gameOver.SetActive(true);
         playButton.SetActive(true);
         _spawner.GetComponent<Spawner>().ResetTimer();
@@ -81,5 +92,7 @@ public class GameManager : MonoBehaviour
     {
         score++;
         scoreText.text = score.ToString();
+        PlayerPrefs.SetInt("score", score);
+       
     }
 }
