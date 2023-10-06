@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public Text scoreText;
     public GameObject playButton;
     public GameObject gameOver;
+    public GameObject leaderButton;
     public GameObject title;
     public GameObject startui;
     private int score = 0;
@@ -47,6 +48,7 @@ public class GameManager : MonoBehaviour
         scoreText.text = score.ToString();
 
         playButton.SetActive(false);
+        leaderButton.SetActive(false);
         gameOver.SetActive(false);
         title.SetActive(false);
         soundMute.SetActive(false);
@@ -82,6 +84,7 @@ public class GameManager : MonoBehaviour
         datamanager.SendMessage("SaveData");
         gameOver.SetActive(true);
         playButton.SetActive(true);
+        leaderButton.SetActive(true);
         _spawner.GetComponent<Spawner>().ResetTimer();
         FindObjectOfType<AudioManager>().Play("gameover");
         soundMute.SetActive(true);
