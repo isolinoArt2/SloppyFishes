@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     private int score = 0;
     public Spawner _spawner;
     public GameObject soundMute;
+    public GameObject spawnerObjt;
 
     private void Awake()
     {
@@ -24,6 +25,8 @@ public class GameManager : MonoBehaviour
         title.SetActive(true);
         Pause();
         _player.SetActive(false);
+        Time.timeScale = 1f;
+        spawnerObjt.SetActive(false);
     }
     [System.Obsolete]
     private void Start()
@@ -35,7 +38,7 @@ public class GameManager : MonoBehaviour
     [System.Obsolete]
     public void Play()
     {
-        
+        spawnerObjt.SetActive(true);
         score = 0;
         scoreText.text = score.ToString();
 
@@ -63,11 +66,13 @@ public class GameManager : MonoBehaviour
         player.enabled = false;
     }
 
+    [System.Obsolete]
     public void GameOver()
     {
         gameOver.SetActive(true);
         playButton.SetActive(true);
         _spawner.GetComponent<Spawner>().ResetTimer();
+        FindObjectOfType<AudioManager>().Play("gameover");
         soundMute.SetActive(true);
         Pause();
     }

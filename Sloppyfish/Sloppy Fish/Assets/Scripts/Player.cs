@@ -4,7 +4,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     private SpriteRenderer spriteRenderer;
-    public Sprite[] sprites;
+   // public Sprite[] sprites;
     private int spriteIndex;
     private Vector3 direction;
     public float gravity = -9.8f;
@@ -25,7 +25,7 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-        InvokeRepeating(nameof(AnimateSprite), 0.15f, 0.15f);
+      //  InvokeRepeating(nameof(AnimateSprite), 0.15f, 0.15f);
     }
 
     private void OnEnable()
@@ -53,7 +53,7 @@ public class Player : MonoBehaviour
     }
 
  
-
+    /*
     private void AnimateSprite()
     {
         spriteIndex++;
@@ -65,7 +65,7 @@ public class Player : MonoBehaviour
 
         spriteRenderer.sprite = sprites[spriteIndex];
     }
-
+    */
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Obstacle"))
