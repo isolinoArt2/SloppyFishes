@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
     public List<GameObject> bubblePrefabs; // Lista de prefabs de burbujas
     public Transform bubbleSpawnPoint; // Punto de spawn de las burbujas
 
-    [SerializeField] private AudioSource jumpSoundEffect;
+    //[SerializeField] private AudioSource jumpSoundEffect;
 
     public GameManager gameManager; // Reference to the GameManager
 
@@ -36,11 +36,14 @@ public class Player : MonoBehaviour
         direction = Vector3.zero;
 
     }
+
+    [System.Obsolete]
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
         {
-            jumpSoundEffect.Play();
+            //jumpSoundEffect.Play();
+            FindObjectOfType<AudioManager>().Play("jump");
             direction = Vector3.up * strength;
             BubbleSpawn();
         }
