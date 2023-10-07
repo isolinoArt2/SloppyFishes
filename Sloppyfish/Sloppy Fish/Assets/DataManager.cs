@@ -15,7 +15,7 @@ using System.Text.RegularExpressions;
 //using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
 using TMPro;
-
+using System.Linq;
 
 public class DataManager : MonoBehaviour
 {
@@ -247,7 +247,7 @@ public class DataManager : MonoBehaviour
         yield return null;
     }
 
-       public void LoadLeaderboard()
+    public void LoadLeaderboard()
     {
         if (isConnected)
         {
@@ -274,6 +274,13 @@ public class DataManager : MonoBehaviour
                     // Variable para llevar un seguimiento del índice
                     int index = 1;
 
+                    // Calcula la cantidad total de elementos en la consulta
+                    int totalElements = 0;
+                    foreach (var doc in snapshot.Documents)
+                    {
+                        totalElements++;
+                    }
+
                     foreach (DocumentSnapshot doc in snapshot.Documents)
                     {
                         string playerName = doc.GetValue<string>("playerName");
@@ -282,8 +289,8 @@ public class DataManager : MonoBehaviour
                         // Crea una instancia de ScoreElement y configura los datos
                         ScoreElement scoreElement = Instantiate(scoreElementPrefab, scoreElementsContainer);
 
-                        // Agrega el índice, nombre del jugador y puntuación al elemento de puntuación
-                        scoreElement.NewScoreElement(index, playerName, playerScore);
+                        // Agrega el índice invertido, nombre del jugador y puntuación al elemento de puntuación
+                        scoreElement.NewScoreElement(totalElements - index + 1, playerName, playerScore);
 
                         // Incrementa el índice
                         index++;
@@ -291,9 +298,9 @@ public class DataManager : MonoBehaviour
                         // Agrega el ScoreElement a la lista
                         scoreElements.Add(scoreElement);
                     }
-                    // Invierte la lista para obtener el orden descendente
-                    scoreElements.Reverse();
 
+                    // No es necesario invertir la lista ya que los índices se generan en orden invertido
+                    scoreElements.Reverse();
                     // Reorganiza las instancias en el contenedor
                     foreach (var scoreElement in scoreElements)
                     {

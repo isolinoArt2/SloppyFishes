@@ -18,7 +18,7 @@
 
                   <!-- Required for Nearby Connections API -->
              <meta-data android:name="com.google.android.gms.nearby.connection.SERVICE_ID"
-                  android:value="com.SloppyStudios.SloppyFish" />
+                  android:value="com.SloppyStudios.SloppyFishGame" />
 
 
         <!-- The space in these forces it to be interpreted as a string vs. int -->

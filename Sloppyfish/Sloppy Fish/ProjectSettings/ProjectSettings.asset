@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: Sloppy Studios
-  productName: Sloppy Fish
+  productName: 'Sloppy Fish Game '
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0, g: 0, b: 0, a: 1}
@@ -160,7 +160,7 @@ PlayerSettings:
   androidMaxAspectRatio: 2.1
   androidMinAspectRatio: 1
   applicationIdentifier:
-    Android: com.SloppyStudios.SloppyFish
+    Android: com.SloppyStudios.SloppyFishGame
     Standalone: com.DefaultCompany.2DProject
   buildNumber:
     Bratwurst: 0

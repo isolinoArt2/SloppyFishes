@@ -39,7 +39,7 @@ namespace GooglePlayGames {
         public const string ApplicationId = "736249224303"; // Filled in automatically
         public const string IosClientId = "__IOS_CLIENTID__"; // Filled in automatically
         public const string WebClientId = "736249224303-7totnldn6q4k6mqtodh0sulmkrrs3l5h.apps.googleusercontent.com"; // Filled in automatically
-        public const string NearbyConnectionServiceId = "com.SloppyStudios.SloppyFish";
+        public const string NearbyConnectionServiceId = "com.SloppyStudios.SloppyFishGame";
 
         public static bool ApplicationIdInitialized() {
             return !string.IsNullOrEmpty(ApplicationId) && !ApplicationId.Equals(ToEscapedToken(UnescapedApplicationId));
