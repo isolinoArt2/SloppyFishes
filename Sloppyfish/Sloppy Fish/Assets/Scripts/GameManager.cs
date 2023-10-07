@@ -78,7 +78,7 @@ public class GameManager : MonoBehaviour
         if (PlayerPrefs.GetInt("score") > highscore)
         {
             PlayerPrefs.SetInt("highScore", PlayerPrefs.GetInt("score"));
-
+            highscore = PlayerPrefs.GetInt("highScore");
 
         }
         datamanager.SendMessage("SaveData");
