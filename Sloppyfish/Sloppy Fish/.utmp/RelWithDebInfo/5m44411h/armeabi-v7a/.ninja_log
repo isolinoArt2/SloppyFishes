@@ -1,5 +1,5 @@
 # ninja log v5
-214	405	1696452781261370414	/Users/mateosilva/Documents/GitHub/SloppyFishes/Sloppyfish/Sloppy Fish/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/5m44411h/obj/armeabi-v7a/libswappywrapper.so	30af21ee111b2b94
-1	213	1696452781109304112	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	bf9280bf14829b73
 0	1420	1696690641083154744	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	bf9280bf14829b73
 1420	2020	1696690641631964298	/Users/mateosilva/Documents/GitHub/SloppyFishes/Sloppyfish/Sloppy Fish/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/5m44411h/obj/armeabi-v7a/libswappywrapper.so	30af21ee111b2b94
+1	170	1696693242230521501	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	bf9280bf14829b73
+171	342	1696693242365080954	/Users/mateosilva/Documents/GitHub/SloppyFishes/Sloppyfish/Sloppy Fish/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/5m44411h/obj/armeabi-v7a/libswappywrapper.so	30af21ee111b2b94
