@@ -28,10 +28,10 @@ public class Player : MonoBehaviour
       //  InvokeRepeating(nameof(AnimateSprite), 0.15f, 0.15f);
     }
 
-    private void OnEnable()
+    public void OnPlay()
     {
         Vector3 position = transform.position;
-        position.y = 0f;
+       position.y = 0f;
         transform.position = position;
         direction = Vector3.zero;
 
@@ -70,11 +70,20 @@ public class Player : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Obstacle"))
         {
+           // Transform obstacleParent = other.transform.parent; // Obtén la referencia al objeto padre
+           // Destroy(obstacleParent.transform.gameObject);
             gameManager.GameOver(); // Call the GameManager's GameOver method through the reference
+            OnPlay();
         }
         else if (other.gameObject.CompareTag("Scoring"))
         {
             gameManager.IncreaseScore(); // Call the GameManager's IncreaseScore method through the reference
+        }
+        else if (other.gameObject.CompareTag("Mines"))
+        {
+            Transform obstacleParent = other.transform.parent; // Obtén la referencia al objeto padre
+            Destroy(obstacleParent.transform.gameObject);
+            gameManager.GameOver(); // Call the GameManager's GameOver method through the reference
         }
     }
 

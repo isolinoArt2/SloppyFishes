@@ -19,5 +19,5 @@ public class Mines : MonoBehaviour
             Destroy(gameObject);
         }
     }
-   
+    
 }

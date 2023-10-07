@@ -12,7 +12,7 @@ using Firebase.Extensions;
 using System;
 using UnityEngine.Networking;
 using System.Text.RegularExpressions;
-using UnityEngine.UIElements;
+//using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
 using TMPro;
 
@@ -29,12 +29,14 @@ public class DataManager : MonoBehaviour
     // public GameObject errorsText;
     string authCode;
 
-   // public int sceneIndex;
+    // public int sceneIndex;
 
-    public UnityEngine.UIElements.Slider slider;
+    // public UnityEngine.UIElements.Slider slider;
+    public Slider connectionSlider; // Asigna el objeto Slider en el Inspector de Unity
+
     //   public TextMeshProUGUI progressText;
 
-  //  public Text leaderboardText; // El Text donde mostrarás la tabla de clasificación
+    //  public Text leaderboardText; // El Text donde mostrarás la tabla de clasificación
     public Transform scoreElementsContainer;
     public ScoreElement scoreElementPrefab; // Asigna tu prefab de ScoreElement en el Inspector de Unity
 
@@ -137,6 +139,9 @@ public class DataManager : MonoBehaviour
         PlayGamesPlatform.Activate();
         GPGSLogin();
         LoadData();
+
+        // Restablece el valor del Slider al inicio de la conexión
+        connectionSlider.value = 0f;
     }
 
 
@@ -169,7 +174,8 @@ public class DataManager : MonoBehaviour
 
     void ConnectToFirebase()
     {
-      //  firebaseStatusText.text = "try to connect";
+        
+        //  firebaseStatusText.text = "try to connect";
         PlayGamesPlatform.Instance.RequestServerSideAccess(true, code =>
         {
             authCode = code;
@@ -197,8 +203,10 @@ public class DataManager : MonoBehaviour
                     _userId = user.DisplayName;
                     isConnected = true;
 
-                   // ffReference = FirebaseFirestore.DefaultInstance;
-                   StartCoroutine(LoadScene());
+                    StartCoroutine(UpdateConnectionSlider());
+
+                    // ffReference = FirebaseFirestore.DefaultInstance;
+                   
                 }
                 else
                 {
@@ -208,25 +216,31 @@ public class DataManager : MonoBehaviour
             });
         });
     }
-
-    
-    IEnumerator LoadScene()
+    private IEnumerator UpdateConnectionSlider()
     {
-        /*
+        float duration = 3f; // Duración total de la conexión (ajusta según tu necesidad)
+        float startTime = Time.time;
 
-        AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
-
-
-        while (!operation.isDone)
+        while (Time.time - startTime < duration)
         {
-            float progress = Mathf.Clamp01(operation.progress / .9f);
+            float progress = Mathf.Clamp01((Time.time - startTime) / duration);
 
-            slider.value = progress;
-            //progressText.text = progress * 100f + "%";
+            // Actualiza el valor del Slider gradualmente
+            connectionSlider.value = progress;
+           
 
             yield return null;
         }
-        */
+
+        // Asegúrate de que el Slider esté en 1 al finalizar la conexión
+        connectionSlider.value = 1f;
+        StartCoroutine(LoadScene());
+    }
+
+    IEnumerator LoadScene()
+    {
+       
+
         SaveData();
         LoadingScreen.SetActive(false);
         Gamemanager.SetActive(true);

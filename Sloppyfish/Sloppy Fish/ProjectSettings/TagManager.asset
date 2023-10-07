@@ -7,6 +7,7 @@ TagManager:
   - Obstacle
   - Scoring
   - destroyWall
+  - Mines
   layers:
   - Default
   - TransparentFX

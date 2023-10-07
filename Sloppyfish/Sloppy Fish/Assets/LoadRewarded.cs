@@ -10,6 +10,8 @@ public class loadRewarded : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowL
 
     string adUnitId;
 
+    public GameObject continuePanel;
+
     void Awake()
     {
 #if UNITY_IOS
@@ -58,6 +60,7 @@ public class loadRewarded : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowL
         if (placementId.Equals(adUnitId) && showCompletionState.Equals(UnityAdsCompletionState.COMPLETED))
         {
             print("Rewarded show complete , Distribute the rewards");
+           
         }
     }
 
@@ -70,6 +73,7 @@ public class loadRewarded : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowL
     public void OnUnityAdsShowStart(string placementId)
     {
         print("Rewarded show start");
+        continuePanel.SetActive(true);
 
     }
 }
