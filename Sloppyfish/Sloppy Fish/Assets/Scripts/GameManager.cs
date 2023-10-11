@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public Player player;
     public GameObject _player;
     public Text scoreText;
+    public GameObject _scoreTextObj;
     public GameObject playButton;
     public GameObject gameOver;
     public GameObject gameOverNoContinue;
@@ -130,6 +131,7 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 0f;
       player.enabled = false;
+        _scoreTextObj.SetActive(false);
        
     }
 
@@ -140,6 +142,7 @@ public class GameManager : MonoBehaviour
         timer = 3.0f;
         timerText.gameObject.SetActive(true);
         player.enabled = true;
+        _scoreTextObj.SetActive(true);
         
     }
 
@@ -148,6 +151,7 @@ public class GameManager : MonoBehaviour
         timerText.gameObject.SetActive(false);
         Time.timeScale = 1f;
        player.enabled = true;
+        _scoreTextObj.SetActive(true);
     }
 
     [System.Obsolete]
