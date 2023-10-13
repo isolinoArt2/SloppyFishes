@@ -7,35 +7,20 @@ using UnityEngine.UI;
 public class SettingMenu : MonoBehaviour
 {
     public AudioMixer mixer;
+    //private float volumLevel;
     public Slider volumSlider;
 
     private void Start()
     {
-        // Cuando el juego inicia, obtén el valor actual del volumen del Audio Mixer
         float value;
-        mixer.GetFloat("Volum", out value);
+        mixer.GetFloat("Volume", out value);
+        volumSlider.value = value;
 
-        // Convierte el valor del Audio Mixer al rango del Slider
-        float sliderValue = MapToSliderValue(value);
-        volumSlider.value = sliderValue;
+
     }
 
-    public void SetVolum(float sliderValue)
+    public void SetVolum(float volume)
     {
-        // Convierte el valor del Slider al rango del Audio Mixer
-        float mixerValue = MapToMixerValue(sliderValue);
-        mixer.SetFloat("Volum", mixerValue);
-    }
-
-    private float MapToSliderValue(float mixerValue)
-    {
-        // Mapea el valor del Audio Mixer al rango del Slider (0 a 1)
-        return (mixerValue + 80f) / 100f;
-    }
-
-    private float MapToMixerValue(float sliderValue)
-    {
-        // Mapea el valor del Slider al rango del Audio Mixer (-80 a 20)
-        return sliderValue * 100f - 80f;
+        mixer.SetFloat("Volume", volume);
     }
 }

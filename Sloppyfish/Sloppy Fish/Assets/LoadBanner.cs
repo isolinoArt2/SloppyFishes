@@ -32,6 +32,7 @@ public class loadBanner : MonoBehaviour
 
         Advertisement.Banner.Load(adUnitId, options);
 
+       // showBannerAd();
     }
     void OnBannerLoaded()
     {

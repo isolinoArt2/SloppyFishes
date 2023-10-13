@@ -41,8 +41,15 @@ public class DataManager : MonoBehaviour
     public ScoreElement scoreElementPrefab; // Asigna tu prefab de ScoreElement en el Inspector de Unity
 
     // data base
+    public GameObject _connectWithNoUser;
 
     string userID;
+
+    public TextMeshProUGUI yourPositionText;
+    public TextMeshProUGUI yourScoreText;
+    public TextMeshProUGUI yourNameText;
+
+
 
     // public InputField nameInpt, coinsInpt, inv1Inpt, inv2Inpt, inv3Inpt;
 
@@ -163,11 +170,17 @@ public class DataManager : MonoBehaviour
                     }
                     else
                     {
+                        //Debug.Log("log in sin usuario");
                         //error fixing firebase dependencies
-                      //  firebaseStatusText.text = "Dependency error";
+                        //  firebaseStatusText.text = "Dependency error";
                     }
                 });
 
+            }
+            else 
+            {
+                Debug.Log("log in sin usuario");
+                _connectWithNoUser.SetActive(true);
             }
         });
     }
@@ -210,6 +223,7 @@ public class DataManager : MonoBehaviour
                 }
                 else
                 {
+                    
                     //error getting user
                     // errorsText.SetActive(true);
                 }
@@ -254,10 +268,8 @@ public class DataManager : MonoBehaviour
             FirebaseFirestore db = FirebaseFirestore.DefaultInstance;
             CollectionReference playersRef = db.Collection("FishPlayerData");
 
-            // Consulta los datos de los líderes y ordénalos por puntuación en orden ascendente
-            Query query = playersRef.OrderBy("playerHighScore").Limit(10);
-
-            query.GetSnapshotAsync().ContinueWithOnMainThread(task =>
+            // Consulta los datos de todos los jugadores
+            playersRef.GetSnapshotAsync().ContinueWithOnMainThread(task =>
             {
                 if (task.IsCompleted)
                 {
@@ -274,14 +286,10 @@ public class DataManager : MonoBehaviour
                     // Variable para llevar un seguimiento del índice
                     int index = 1;
 
-                    // Calcula la cantidad total de elementos en la consulta
-                    int totalElements = 0;
-                    foreach (var doc in snapshot.Documents)
-                    {
-                        totalElements++;
-                    }
+                    // Clasifica a los jugadores por puntuación en orden descendente
+                    var sortedPlayers = snapshot.Documents.OrderByDescending(doc => doc.GetValue<int>("playerHighScore"));
 
-                    foreach (DocumentSnapshot doc in snapshot.Documents)
+                    foreach (DocumentSnapshot doc in sortedPlayers)
                     {
                         string playerName = doc.GetValue<string>("playerName");
                         int playerScore = doc.GetValue<int>("playerHighScore");
@@ -290,7 +298,7 @@ public class DataManager : MonoBehaviour
                         ScoreElement scoreElement = Instantiate(scoreElementPrefab, scoreElementsContainer);
 
                         // Agrega el índice invertido, nombre del jugador y puntuación al elemento de puntuación
-                        scoreElement.NewScoreElement(totalElements - index + 1, playerName, playerScore);
+                        scoreElement.NewScoreElement(index, playerName, playerScore);
 
                         // Incrementa el índice
                         index++;
@@ -299,8 +307,96 @@ public class DataManager : MonoBehaviour
                         scoreElements.Add(scoreElement);
                     }
 
-                    // No es necesario invertir la lista ya que los índices se generan en orden invertido
-                    scoreElements.Reverse();
+                    // Reorganiza las instancias en el contenedor
+                    foreach (var scoreElement in scoreElements)
+                    {
+                        scoreElement.transform.SetAsLastSibling();
+                    }
+                }
+            });
+
+            // Ahora, después de cargar el leaderboard, consulta tu propia posición y puntaje
+            playersRef.GetSnapshotAsync().ContinueWithOnMainThread(myPositionTask =>
+            {
+                if (myPositionTask.IsCompleted)
+                {
+                    QuerySnapshot myPositionSnapshot = myPositionTask.Result;
+                    int myScore = 0;
+
+                    foreach (DocumentSnapshot doc in myPositionSnapshot.Documents)
+                    {
+                        int playerScore = doc.GetValue<int>("playerHighScore");
+
+                        // Si encuentras tu propio documento, guarda tu puntaje
+                        if (doc.Id == userID)
+                        {
+                            myScore = playerScore;
+                            break;
+                        }
+                    }
+
+                    int myPosition = myPositionSnapshot.Documents.Count(doc => doc.GetValue<int>("playerHighScore") > myScore);
+
+                    // Ahora puedes mostrar tu posición y puntaje en la UI
+                    yourPositionText.text = (myPosition + 1).ToString();
+                    yourScoreText.text = myScore.ToString();
+                    yourNameText.text = _userId;
+                }
+            });
+        }
+        else
+        {
+            // Firebase no está conectado
+        }
+    }
+
+
+    /*
+    public void LoadLeaderboard()
+    {
+        if (isConnected)
+        {
+            FirebaseFirestore db = FirebaseFirestore.DefaultInstance;
+            CollectionReference playersRef = db.Collection("FishPlayerData");
+
+            playersRef.GetSnapshotAsync().ContinueWithOnMainThread(task =>
+            {
+                if (task.IsCompleted)
+                {
+                    QuerySnapshot snapshot = task.Result;
+
+                    // Elimina las instancias existentes de ScoreElement en el contenedor
+                    foreach (Transform child in scoreElementsContainer)
+                    {
+                        Destroy(child.gameObject);
+                    }
+
+                    List<ScoreElement> scoreElements = new List<ScoreElement>();
+
+                    // Variable para llevar un seguimiento del índice
+                    int index = 1;
+
+                    foreach (DocumentSnapshot doc in snapshot)
+                    {
+                        string playerName = doc.GetValue<string>("playerName");
+                        int playerScore = doc.GetValue<int>("playerHighScore");
+
+                        // Crea una instancia de ScoreElement y configura los datos
+                        ScoreElement scoreElement = Instantiate(scoreElementPrefab, scoreElementsContainer);
+
+                        // Agrega el índice invertido, nombre del jugador y puntuación al elemento de puntuación
+                        scoreElement.NewScoreElement(index, playerName, playerScore);
+
+                        // Incrementa el índice
+                        index++;
+
+                        // Agrega el ScoreElement a la lista
+                        scoreElements.Add(scoreElement);
+                    }
+
+                    // No es necesario invertir la lista ya que los índices se generan en orden correcto
+                    //scoreElements.Reverse();
+
                     // Reorganiza las instancias en el contenedor
                     foreach (var scoreElement in scoreElements)
                     {
@@ -313,6 +409,13 @@ public class DataManager : MonoBehaviour
         {
             // Firebase no está conectado
         }
+    }
+    */
+
+
+    public void ConnectWithNoUser()
+    {
+        StartCoroutine(LoadScene());
     }
 
 }
