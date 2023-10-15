@@ -8668,7 +8668,7 @@ MonoBehaviour:
     volume: 0.5
     pitch: 1
     source: {fileID: 0}
-    loop: 0
+    loop: 1
     mixer: {fileID: 24100000, guid: 7a1a3ce1a668c4ba094741556f967626, type: 2}
   - name: title
     clip: {fileID: 8300000, guid: c0b5eff9d8cabbc459cfdcf6da97b53b, type: 3}
