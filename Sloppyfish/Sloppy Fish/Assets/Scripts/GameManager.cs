@@ -52,7 +52,7 @@ public class GameManager : MonoBehaviour
     {
         FindObjectOfType<AudioManager>().Play("music");
         FindObjectOfType<AudioManager>().Play("title");
-        highscore = PlayerPrefs.GetInt("highScore");
+        //highscore = PlayerPrefs.GetInt("highScore");
     }
 
     [System.Obsolete]
@@ -61,12 +61,12 @@ public class GameManager : MonoBehaviour
         spawnerObjt.SetActive(true);
         score = 0;
         scoreText.text = score.ToString();
-
-       // playButton.SetActive(false);
-      //  leaderButton.SetActive(false);
-      //  gameOver.SetActive(false);
-     //   title.SetActive(false);
-       // soundMute.SetActive(false);
+       // highscore = PlayerPrefs.GetInt("highScore");
+        // playButton.SetActive(false);
+        //  leaderButton.SetActive(false);
+        //  gameOver.SetActive(false);
+        //   title.SetActive(false);
+        // soundMute.SetActive(false);
 
         Time.timeScale = 1f;
         player.enabled = true;
@@ -163,6 +163,8 @@ public class GameManager : MonoBehaviour
         {
             Destroy(Mines[i].gameObject);
         }
+
+        highscore = PlayerPrefs.GetInt("highScore");
         if (PlayerPrefs.GetInt("score") > highscore)
         {
             PlayerPrefs.SetInt("highScore", PlayerPrefs.GetInt("score"));
