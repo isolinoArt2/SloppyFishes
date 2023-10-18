@@ -59,8 +59,8 @@ public class GameManager : MonoBehaviour
     public void Play()
     {
         spawnerObjt.SetActive(true);
-        score = 0;
-        scoreText.text = score.ToString();
+       /// score = 0;
+      //  scoreText.text = score.ToString();
        // highscore = PlayerPrefs.GetInt("highScore");
         // playButton.SetActive(false);
         //  leaderButton.SetActive(false);
@@ -171,7 +171,7 @@ public class GameManager : MonoBehaviour
             highscore = PlayerPrefs.GetInt("highScore");
 
         }
-        datamanager.SendMessage("SaveData");
+       // datamanager.SendMessage("SaveData");
 
         if (!continueUsed)
         {
@@ -250,4 +250,6 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetInt("score", score);
        
     }
+
+
 }

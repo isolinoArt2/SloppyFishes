@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     //[SerializeField] private AudioSource jumpSoundEffect;
 
     public GameManager gameManager; // Reference to the GameManager
+    public DataManager dataManager;
 
     private void Awake()
     {
@@ -77,7 +78,9 @@ public class Player : MonoBehaviour
         }
         else if (other.gameObject.CompareTag("Scoring"))
         {
-            gameManager.IncreaseScore(); // Call the GameManager's IncreaseScore method through the reference
+            //gameManager.IncreaseScore(); // Call the GameManager's IncreaseScore method through the reference
+            // dataManager.IncreaseScore(1);
+            dataManager.SendMessage("IncreaseScore", 1);
         }
         else if (other.gameObject.CompareTag("Mines"))
         {

@@ -3038,6 +3038,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1749972031}
+        m_TargetAssemblyTypeName: DataManager, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &867419287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4342,6 +4354,7 @@ MonoBehaviour:
   - {fileID: 4247808812689562732, guid: b1e66cb6ae46d45468d6e1b83cecb3d4, type: 3}
   bubbleSpawnPoint: {fileID: 2079073980}
   gameManager: {fileID: 744118049}
+  dataManager: {fileID: 1749972031}
 --- !u!1 &1051460739
 GameObject:
   m_ObjectHideFlags: 0
@@ -7659,6 +7672,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6204021842220521116, guid: bcbcbc7107f734fc3a4aa7f4cd4f2870, type: 3}
+      propertyPath: scoreText
+      value: 
+      objectReference: {fileID: 1644587488}
     - target: {fileID: 6204021842220521116, guid: bcbcbc7107f734fc3a4aa7f4cd4f2870, type: 3}
       propertyPath: yourUserId
       value: 

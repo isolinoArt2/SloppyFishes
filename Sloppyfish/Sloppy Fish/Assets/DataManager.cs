@@ -52,13 +52,15 @@ public class DataManager : MonoBehaviour
     public TextMeshProUGUI yourScoreText;
     public TextMeshProUGUI yourNameText;
 
+    public Text scoreText;
     //public Text yourUserScore;
 
     private int _userLoadedScore;
     private string _userLoadedName;
 
     private int _yourIndex;
-
+    private int highscore;
+    private int _currentScore;
     // public InputField nameInpt, coinsInpt, inv1Inpt, inv2Inpt, inv3Inpt;
 
     bool isConnected;
@@ -156,12 +158,16 @@ public class DataManager : MonoBehaviour
 
            // string playerName = _userId.text;
             string playerName = _userId;
-            int playerScore = PlayerPrefs.GetInt("highScore");
-           
+            //  int playerScore = PlayerPrefs.GetInt("highScore");
+            int playerScore = highscore;
+
+            int playerCurrentScore = _currentScore;
+
             Dictionary<string, object> saveValues = new Dictionary<string, object>
             {
-                {"playerName",playerName },
-                {"playerHighScore",playerScore },
+                            {"playerCurrentScore", playerCurrentScore},
+                            {"playerName",playerName },
+                            {"playerHighScore",playerScore },
             };
             //esta collection guarda todos los documentos de datos de nuestros usuarios
             DocumentReference docRef = db.Collection("FishPlayerData").Document(userID);
@@ -424,163 +430,78 @@ public class DataManager : MonoBehaviour
             // Firebase no está conectado
         }
     }
+    public void IncreaseScore(int amount)
+    {
+        _currentScore += amount;
+        scoreText.text = _currentScore.ToString();
+        IncreaseScoreInFirebase(); // Llama a la nueva función para actualizar Firebase
+    }
 
-
-
-    // leaderboard funcional
-    //
-    /*
-    public void LoadLeaderboard()
+    public void IncreaseScoreInFirebase()
     {
         if (isConnected)
         {
             FirebaseFirestore db = FirebaseFirestore.DefaultInstance;
-            CollectionReference playersRef = db.Collection("FishPlayerData");
+            DocumentReference playerDocRef = db.Collection("FishPlayerData").Document(userID);
 
-            // Consulta los datos de todos los jugadores
-            playersRef.GetSnapshotAsync().ContinueWithOnMainThread(task =>
+            // Obtén el puntaje del jugador desde Firebase
+            playerDocRef.GetSnapshotAsync().ContinueWithOnMainThread(task =>
             {
                 if (task.IsCompleted)
                 {
-                    QuerySnapshot snapshot = task.Result;
+                    DocumentSnapshot snapshot = task.Result;
 
-                    // Elimina las instancias existentes de ScoreElement en el contenedor
-                    foreach (Transform child in scoreElementsContainer)
+                    if (snapshot.Exists)
                     {
-                        Destroy(child.gameObject);
-                    }
+                        // string playerName = _userId.text;
+                        string playerName = _userId;
+                        //  int playerScore = PlayerPrefs.GetInt("highScore");
+                        int playerScore = _userLoadedScore;
 
-                    List<ScoreElement> scoreElements = new List<ScoreElement>();
-
-                    // Variable para llevar un seguimiento del índice
-                    int index = 1;
-
-                    // Clasifica a los jugadores por puntuación en orden descendente
-                    var sortedPlayers = snapshot.Documents.OrderByDescending(doc => doc.GetValue<int>("playerHighScore"));
-
-                    foreach (DocumentSnapshot doc in sortedPlayers)
-                    {
-                        string playerName = doc.GetValue<string>("playerName");
-                        int playerScore = doc.GetValue<int>("playerHighScore");
-
-                        // Crea una instancia de ScoreElement y configura los datos
-                        ScoreElement scoreElement = Instantiate(scoreElementPrefab, scoreElementsContainer);
-
-                        // Agrega el índice invertido, nombre del jugador y puntuación al elemento de puntuación
-                        scoreElement.NewScoreElement(index, playerName, playerScore);
-
-                        // Incrementa el índice
-                        index++;
-
-                        // Agrega el ScoreElement a la lista
-                        scoreElements.Add(scoreElement);
-                    }
-
-                    // Reorganiza las instancias en el contenedor
-                    foreach (var scoreElement in scoreElements)
-                    {
-                        scoreElement.transform.SetAsLastSibling();
-                    }
-                }
-            });
-
-            // Ahora, después de cargar el leaderboard, consulta tu propia posición y puntaje
-            playersRef.GetSnapshotAsync().ContinueWithOnMainThread(myPositionTask =>
-            {
-                if (myPositionTask.IsCompleted)
-                {
-                    QuerySnapshot myPositionSnapshot = myPositionTask.Result;
-                    int myScore = 0;
-
-                    foreach (DocumentSnapshot doc in myPositionSnapshot.Documents)
-                    {
-                        int playerScore = doc.GetValue<int>("playerHighScore");
-
-                        // Si encuentras tu propio documento, guarda tu puntaje
-                        if (doc.Id == userID)
+                        int playerCurrentScore = _currentScore;
+                        playerDocRef.SetAsync(new Dictionary<string, object>
                         {
-                            myScore = playerScore;
-                            break;
+                            {"playerCurrentScore", playerCurrentScore},
+                            {"playerName",playerName },
+                            {"playerHighScore",playerScore },
+
+                        });
+                        //  int currentScore = snapshot.GetValue<int>("playerHighScore");
+
+                        // Incrementa el puntaje
+                      //  currentScore += amount;
+
+                        if (_currentScore > _userLoadedScore)
+                        {
+                            // Solo si el puntaje actual es mayor que el puntaje máximo, actualiza Firebase
+                            playerDocRef.SetAsync(new Dictionary<string, object>
+                        {
+                            {"playerHighScore", _currentScore},
+                            {"playerCurrentScore", playerCurrentScore},
+                            {"playerName",playerName },
+
+
+                        }); ;
+
+                            // Actualiza el puntaje local solo si es mayor
+                            highscore = _currentScore;
                         }
+
+                       
                     }
-
-                    int myPosition = myPositionSnapshot.Documents.Count(doc => doc.GetValue<int>("playerHighScore") > myScore);
-
-                    // Ahora puedes mostrar tu posición y puntaje en la UI
-                    yourPositionText.text = (myPosition + 1).ToString();
-                    yourScoreText.text = myScore.ToString();
-                    yourNameText.text = _userId;
                 }
             });
         }
-        else
-        {
-            // Firebase no está conectado
-        }
     }
-    */
 
-
-    /*
-    public void LoadLeaderboard()
+    public void Play()
     {
-        if (isConnected)
-        {
-            FirebaseFirestore db = FirebaseFirestore.DefaultInstance;
-            CollectionReference playersRef = db.Collection("FishPlayerData");
+        
+        _currentScore = 0;
+        scoreText.text = _currentScore.ToString();
+        
 
-            playersRef.GetSnapshotAsync().ContinueWithOnMainThread(task =>
-            {
-                if (task.IsCompleted)
-                {
-                    QuerySnapshot snapshot = task.Result;
-
-                    // Elimina las instancias existentes de ScoreElement en el contenedor
-                    foreach (Transform child in scoreElementsContainer)
-                    {
-                        Destroy(child.gameObject);
-                    }
-
-                    List<ScoreElement> scoreElements = new List<ScoreElement>();
-
-                    // Variable para llevar un seguimiento del índice
-                    int index = 1;
-
-                    foreach (DocumentSnapshot doc in snapshot)
-                    {
-                        string playerName = doc.GetValue<string>("playerName");
-                        int playerScore = doc.GetValue<int>("playerHighScore");
-
-                        // Crea una instancia de ScoreElement y configura los datos
-                        ScoreElement scoreElement = Instantiate(scoreElementPrefab, scoreElementsContainer);
-
-                        // Agrega el índice invertido, nombre del jugador y puntuación al elemento de puntuación
-                        scoreElement.NewScoreElement(index, playerName, playerScore);
-
-                        // Incrementa el índice
-                        index++;
-
-                        // Agrega el ScoreElement a la lista
-                        scoreElements.Add(scoreElement);
-                    }
-
-                    // No es necesario invertir la lista ya que los índices se generan en orden correcto
-                    //scoreElements.Reverse();
-
-                    // Reorganiza las instancias en el contenedor
-                    foreach (var scoreElement in scoreElements)
-                    {
-                        scoreElement.transform.SetAsLastSibling();
-                    }
-                }
-            });
-        }
-        else
-        {
-            // Firebase no está conectado
-        }
     }
-    */
 
 
     public void ConnectWithNoUser()
