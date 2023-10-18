@@ -66,6 +66,10 @@ public class DataManager : MonoBehaviour
     bool isConnected;
     //public Text SaveLog, LoadLog;
 
+    public int _gameVersion;
+    public GameObject _gameVersionPanel;
+    public GameObject startUI;
+
      private Text nameLbl, Highscorelbl;
     private void Awake()
     {
@@ -84,6 +88,43 @@ public class DataManager : MonoBehaviour
 
         // Restablece el valor del Slider al inicio de la conexión
         connectionSlider.value = 0f;
+    }
+    public void VerifyGameVersion()
+    {
+        FirebaseFirestore db = FirebaseFirestore.DefaultInstance;
+        DocumentReference gameVersionDocRef = db.Collection("GameVersion").Document("nm9LWK8xhVtzJHGSHzkV");
+
+        gameVersionDocRef.GetSnapshotAsync().ContinueWithOnMainThread(task =>
+        {
+            DocumentSnapshot snapshot = task.Result;
+
+            if (snapshot.Exists)
+            {
+                int gameVersion;
+                if (snapshot.TryGetValue("Version", out gameVersion))
+                {
+                    if (gameVersion == _gameVersion)
+                    {
+                        // La versión del juego en Firebase es la misma que la configurada en Unity
+                    }
+                    else
+                    {
+                        _gameVersionPanel.SetActive(true);
+                        startUI.SetActive(false);
+                        //Debug.Log("La versión del juego en Firebase es diferente. Actualice su juego.");
+                        // Maneja la diferencia en las versiones aquí (por ejemplo, mostrar un mensaje al usuario).
+                    }
+                }
+                else
+                {
+                    // Maneja el error de obtener la versión del juego en Firebase
+                }
+            }
+            else
+            {
+                // Maneja el caso de que el documento de versión no exista en Firebase
+            }
+        });
     }
 
     public void LoadData()
@@ -280,6 +321,7 @@ public class DataManager : MonoBehaviour
     }
     private IEnumerator UpdateConnectionSlider()
     {
+        VerifyGameVersion();
         LoadData();
         float duration = 3f; // Duración total de la conexión (ajusta según tu necesidad)
         float startTime = Time.time;
