@@ -584,6 +584,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabs:
   - {fileID: 169564643063047191, guid: 6f67fbb3910e14aedaeb32c89d11b799, type: 3}
+  - {fileID: 169564643063047191, guid: d9046c1c3627a224b97bc11e644beb8b, type: 3}
+  - {fileID: 169564643063047191, guid: 93e481daea609be439a6425b2641c7f7, type: 3}
+  - {fileID: 1686098519574491150, guid: fe4056647eb95eb468959ae1f23f1706, type: 3}
   spawnpoints:
   - {fileID: 2124506409}
   - {fileID: 1836185180}
@@ -5054,7 +5057,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 39.05114}
+  m_AnchoredPosition: {x: 0, y: 39.051025}
   m_SizeDelta: {x: -52.5311, y: -458.1878}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1284206939
@@ -9292,7 +9295,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 64.61437}
+  m_AnchoredPosition: {x: 0, y: 64.61426}
   m_SizeDelta: {x: 0, y: 243.6063}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2133707974
