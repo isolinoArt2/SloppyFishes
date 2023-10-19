@@ -5,8 +5,13 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     public List<GameObject> prefabs; // Lista de prefabs inicial
+    public List<GameObject> prefabs2; // Lista de prefabs inicial
+    public List<GameObject> prefabs3; // Lista de prefabs inicial
     public List<Transform> spawnpoints; // Lista de puntos de spawn
     public float tiempoEntreInstancias = 2f; // Tiempo en segundos entre cada instancia
+
+    public int playingLevel = 1;
+    public float timerInterval = 10f; // Intervalo de tiempo en segundos
 
     private float playingTime = 0f; // Tiempo transcurrido desde el inicio del juego
     private int ultimoPrefabInstanciadoIndex = -1; // Índice del último prefab instanciadopr
@@ -16,6 +21,16 @@ public class Spawner : MonoBehaviour
     {
         // Comenzar a invocar la función Spawn() cada tiempoEntreInstancias segundos
         InvokeRepeating("Spawn", 0f, tiempoEntreInstancias);
+        StartCoroutine(UpdatePlayingLevel());
+    }
+    private IEnumerator UpdatePlayingLevel()
+    {
+        while (true) // Ejecutar indefinidamente
+        {
+            yield return new WaitForSeconds(timerInterval); // Esperar 10 segundos
+            playingLevel++; // Aumentar el nivel
+           
+        }
     }
     private void Update()
     {
@@ -63,15 +78,42 @@ public class Spawner : MonoBehaviour
             Debug.LogWarning("La lista de prefabs o la lista de spawnpoints está vacía.");
             return;
         }
+        if (playingLevel == 1)
+        {
+            // Seleccionar un prefab aleatorio de la lista actual
+            int indicePrefabAleatorio = Random.Range(0, prefabs.Count);
+            GameObject prefabSeleccionado = prefabs[indicePrefabAleatorio];
 
-        // Seleccionar un prefab aleatorio de la lista actual
-        int indicePrefabAleatorio = Random.Range(0, prefabs.Count);
-        GameObject prefabSeleccionado = prefabs[indicePrefabAleatorio];
+            // Instanciar el prefab en la posición del punto de spawn seleccionado
+            int indiceSpawnAleatorio = Random.Range(0, spawnpoints.Count);
+            Transform puntoSpawnSeleccionado = spawnpoints[_nuevoIndice];
+            Instantiate(prefabs[indiceSpawnAleatorio], puntoSpawnSeleccionado.position, puntoSpawnSeleccionado.rotation);
 
-        // Instanciar el prefab en la posición del punto de spawn seleccionado
-        int indiceSpawnAleatorio = Random.Range(0, spawnpoints.Count);
-        Transform puntoSpawnSeleccionado = spawnpoints[_nuevoIndice];
-        Instantiate(prefabs[indiceSpawnAleatorio], puntoSpawnSeleccionado.position, puntoSpawnSeleccionado.rotation);
+        }
+        if (playingLevel == 2)
+        {
+            // Seleccionar un prefab aleatorio de la lista actual
+            int indicePrefabAleatorio = Random.Range(0, prefabs2.Count);
+            GameObject prefabSeleccionado = prefabs2[indicePrefabAleatorio];
+
+            // Instanciar el prefab en la posición del punto de spawn seleccionado
+            int indiceSpawnAleatorio = Random.Range(0, spawnpoints.Count);
+            Transform puntoSpawnSeleccionado = spawnpoints[_nuevoIndice];
+            Instantiate(prefabs2[indiceSpawnAleatorio], puntoSpawnSeleccionado.position, puntoSpawnSeleccionado.rotation);
+
+        }
+        if (playingLevel >= 3)
+        {
+            // Seleccionar un prefab aleatorio de la lista actual
+            int indicePrefabAleatorio = Random.Range(0, prefabs3.Count);
+            GameObject prefabSeleccionado = prefabs3[indicePrefabAleatorio];
+
+            // Instanciar el prefab en la posición del punto de spawn seleccionado
+            int indiceSpawnAleatorio = Random.Range(0, spawnpoints.Count);
+            Transform puntoSpawnSeleccionado = spawnpoints[_nuevoIndice];
+            Instantiate(prefabs3[indiceSpawnAleatorio], puntoSpawnSeleccionado.position, puntoSpawnSeleccionado.rotation);
+
+        }
 
         // Actualizar el índice del último prefab instanciado
         ultimoPrefabInstanciadoIndex = _nuevoIndice;

@@ -586,8 +586,19 @@ MonoBehaviour:
   - {fileID: 169564643063047191, guid: 6f67fbb3910e14aedaeb32c89d11b799, type: 3}
   - {fileID: 169564643063047191, guid: d9046c1c3627a224b97bc11e644beb8b, type: 3}
   - {fileID: 169564643063047191, guid: 93e481daea609be439a6425b2641c7f7, type: 3}
-  - {fileID: 1686098519574491150, guid: fe4056647eb95eb468959ae1f23f1706, type: 3}
   - {fileID: 169564643063047191, guid: c4aa8b042dc994b71be8e751974e3118, type: 3}
+  prefabs2:
+  - {fileID: 169564643063047191, guid: 6f67fbb3910e14aedaeb32c89d11b799, type: 3}
+  - {fileID: 169564643063047191, guid: d9046c1c3627a224b97bc11e644beb8b, type: 3}
+  - {fileID: 169564643063047191, guid: 93e481daea609be439a6425b2641c7f7, type: 3}
+  - {fileID: 169564643063047191, guid: c4aa8b042dc994b71be8e751974e3118, type: 3}
+  - {fileID: 1686098519574491150, guid: fe4056647eb95eb468959ae1f23f1706, type: 3}
+  prefabs3:
+  - {fileID: 169564643063047191, guid: 6f67fbb3910e14aedaeb32c89d11b799, type: 3}
+  - {fileID: 169564643063047191, guid: d9046c1c3627a224b97bc11e644beb8b, type: 3}
+  - {fileID: 169564643063047191, guid: 93e481daea609be439a6425b2641c7f7, type: 3}
+  - {fileID: 169564643063047191, guid: c4aa8b042dc994b71be8e751974e3118, type: 3}
+  - {fileID: 1686098519574491150, guid: fe4056647eb95eb468959ae1f23f1706, type: 3}
   - {fileID: 6307431446844574045, guid: a99ea3882ab7e7d4b91155e855e62bdf, type: 3}
   spawnpoints:
   - {fileID: 2124506409}
@@ -597,6 +608,8 @@ MonoBehaviour:
   - {fileID: 1998527275}
   - {fileID: 1239522419}
   tiempoEntreInstancias: 1
+  playingLevel: 1
+  timerInterval: 20
 --- !u!1 &343919807
 GameObject:
   m_ObjectHideFlags: 0
@@ -7991,7 +8004,7 @@ PrefabInstance:
       objectReference: {fileID: 744118048}
     - target: {fileID: 6204021842220521116, guid: bcbcbc7107f734fc3a4aa7f4cd4f2870, type: 3}
       propertyPath: _gameVersion
-      value: 12
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6204021842220521116, guid: bcbcbc7107f734fc3a4aa7f4cd4f2870, type: 3}
       propertyPath: yourNameText
@@ -9726,18 +9739,6 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 586642796}
-        m_TargetAssemblyTypeName: loadBanner, Assembly-CSharp
-        m_MethodName: HideBannerAd
-        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

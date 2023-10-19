@@ -85,10 +85,21 @@ public class DataManager : MonoBehaviour
         PlayGamesPlatform.Activate();
         GPGSLogin();
         //LoadData();
-
+        //StartCoroutine(UpdateScore());
         // Restablece el valor del Slider al inicio de la conexión
         connectionSlider.value = 0f;
     }
+    /*
+    private IEnumerator UpdateScore()
+    {
+        while (true) // Ejecutar indefinidamente
+        {
+            yield return new WaitForSeconds(15); // Esperar 10 segundos
+            IncreaseScoreInFirebase();
+
+        }
+    }
+    */
     public void VerifyGameVersion()
     {
         FirebaseFirestore db = FirebaseFirestore.DefaultInstance;
@@ -206,7 +217,7 @@ public class DataManager : MonoBehaviour
 
             Dictionary<string, object> saveValues = new Dictionary<string, object>
             {
-                            {"playerCurrentScore", playerCurrentScore},
+                            //{"playerCurrentScore", playerCurrentScore},
                             {"playerName",playerName },
                             {"playerHighScore",playerScore },
             };
@@ -476,7 +487,11 @@ public class DataManager : MonoBehaviour
     {
         _currentScore += amount;
         scoreText.text = _currentScore.ToString();
-        IncreaseScoreInFirebase(); // Llama a la nueva función para actualizar Firebase
+        if (_currentScore > _userLoadedScore)
+        {
+            IncreaseScoreInFirebase(); // Llama a la nueva función para actualizar Firebase
+        }
+            
     }
 
     public void IncreaseScoreInFirebase()
@@ -503,16 +518,20 @@ public class DataManager : MonoBehaviour
                         int playerCurrentScore = _currentScore;
                         playerDocRef.SetAsync(new Dictionary<string, object>
                         {
-                            {"playerCurrentScore", playerCurrentScore},
-                            {"playerName",playerName },
-                            {"playerHighScore",playerScore },
+                            {"playerHighScore", _currentScore},
+                             {"playerName",playerName },
+                           // {"playerCurrentScore", playerCurrentScore},
+                           
+                           // {"playerCurrentScore", playerCurrentScore},
+                          //  {"playerName",playerName },
+                          //  {"playerHighScore",playerScore },
 
-                        });
+                        }); 
                         //  int currentScore = snapshot.GetValue<int>("playerHighScore");
 
                         // Incrementa el puntaje
                       //  currentScore += amount;
-
+                      /*
                         if (_currentScore > _userLoadedScore)
                         {
                             // Solo si el puntaje actual es mayor que el puntaje máximo, actualiza Firebase
@@ -524,10 +543,11 @@ public class DataManager : MonoBehaviour
 
 
                         }); ;
+                            */
 
                             // Actualiza el puntaje local solo si es mayor
                             highscore = _currentScore;
-                        }
+                        
 
                        
                     }
