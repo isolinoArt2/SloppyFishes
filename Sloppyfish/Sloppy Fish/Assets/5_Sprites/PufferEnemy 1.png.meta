@@ -1,0 +1,465 @@
+fileFormatVersion: 2
+guid: 04955e466533dc54bb634fde578b881c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -151376646019892229
+    second: PufferEnemy 1_0
+  - first:
+      213: 333753302592888514
+    second: PufferEnemy 1_1
+  - first:
+      213: 5314600540255062161
+    second: PufferEnemy 1_2
+  - first:
+      213: 6913601118547647470
+    second: PufferEnemy 1_3
+  - first:
+      213: 7493283834196880539
+    second: PufferEnemy 1_4
+  - first:
+      213: -7143906746816731156
+    second: PufferEnemy 1_5
+  - first:
+      213: 2188038837088129110
+    second: PufferEnemy 1_6
+  - first:
+      213: -1144436315378258521
+    second: PufferEnemy 1_7
+  - first:
+      213: 1160633675285488740
+    second: PufferEnemy 1_8
+  - first:
+      213: -1900889913900935544
+    second: PufferEnemy 1_9
+  - first:
+      213: 609940379000388664
+    second: PufferEnemy 1_10
+  - first:
+      213: 6885939594243936346
+    second: PufferEnemy 1_11
+  - first:
+      213: 8260010317026758762
+    second: PufferEnemy 1_12
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PufferEnemy 1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 58
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca647720dd485cd4ebcea4f628ee0ec2
+      internalID: -908741707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PufferEnemy 1_1
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 0
+        width: 58
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b5ccdd689dab87479e56118613ecd85
+      internalID: 639212470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PufferEnemy 1_2
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 0
+        width: 58
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ee623de2ca37804db96fbeb82cd5bea
+      internalID: -550532370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PufferEnemy 1_3
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 0
+        width: 58
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fdac4b61e870404fb62a40c68fd15b8
+      internalID: -1295672923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PufferEnemy 1_4
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 0
+        width: 58
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6c2701bad5a16e48a7dddd4524399b1
+      internalID: 535108885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PufferEnemy 1_5
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 0
+        width: 58
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01ad600eef9b63f498535622d9da274c
+      internalID: 1782564174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PufferEnemy 1_6
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 0
+        width: 58
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8551a992f3aed504e91369d4c388630f
+      internalID: 537868925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PufferEnemy 1_7
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 0
+        width: 58
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94defb0552f1e3c4d90ad92a60a16845
+      internalID: 1156719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PufferEnemy 1_8
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 0
+        width: 58
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f1c2cccd5aefda42a7b188529966cba
+      internalID: 1445247411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PufferEnemy 1_9
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 0
+        width: 58
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf289c6d2530e1d4cb05ce86bde66cf7
+      internalID: -284953943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PufferEnemy 1_10
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 0
+        width: 58
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6812aa8f4b330a46b76da3904c38abc
+      internalID: -25811048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PufferEnemy 1_11
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 0
+        width: 58
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aefca9da5301c0f4cb160d6a047254fb
+      internalID: 995839787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PufferEnemy 1_12
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 0
+        width: 58
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bad64a7bfc566740b7bee57819e2e9e
+      internalID: 1102577963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: e11be8145c207a9419b9aa2d2ea06d71
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      PufferEnemy 1_0: -908741707
+      PufferEnemy 1_1: 639212470
+      PufferEnemy 1_10: -25811048
+      PufferEnemy 1_11: 995839787
+      PufferEnemy 1_12: 1102577963
+      PufferEnemy 1_2: -550532370
+      PufferEnemy 1_3: -1295672923
+      PufferEnemy 1_4: 535108885
+      PufferEnemy 1_5: 1782564174
+      PufferEnemy 1_6: 537868925
+      PufferEnemy 1_7: 1156719
+      PufferEnemy 1_8: 1445247411
+      PufferEnemy 1_9: -284953943
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

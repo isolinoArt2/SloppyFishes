@@ -1,0 +1,940 @@
+fileFormatVersion: 2
+guid: eb4b86d4c180a4af8b39059642257647
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4762623943015254517
+    second: Jellyfish_atlas_0
+  - first:
+      213: 8943230422165855085
+    second: Jellyfish_atlas_1
+  - first:
+      213: 4574695966425662188
+    second: Jellyfish_atlas_2
+  - first:
+      213: 1777254177562554735
+    second: Jellyfish_atlas_3
+  - first:
+      213: 3027173140362836815
+    second: Jellyfish_atlas_4
+  - first:
+      213: -2758472391914566948
+    second: Jellyfish_atlas_5
+  - first:
+      213: 8445945778089314078
+    second: Jellyfish_atlas_6
+  - first:
+      213: -4430478610762812292
+    second: Jellyfish_atlas_7
+  - first:
+      213: 5949772553991209465
+    second: Jellyfish_atlas_8
+  - first:
+      213: 7303768839437199369
+    second: Jellyfish_atlas_9
+  - first:
+      213: 3221384730581855271
+    second: Jellyfish_atlas_10
+  - first:
+      213: 5647678805593122541
+    second: Jellyfish_atlas_11
+  - first:
+      213: 8050189097319898935
+    second: Jellyfish_atlas_12
+  - first:
+      213: 6374350905939118918
+    second: Jellyfish_atlas_13
+  - first:
+      213: 7743528587001370992
+    second: Jellyfish_atlas_14
+  - first:
+      213: 2218401106182989342
+    second: Jellyfish_atlas_15
+  - first:
+      213: 3408356447649317132
+    second: Jellyfish_atlas_16
+  - first:
+      213: -1271160599931664583
+    second: Jellyfish_atlas_17
+  - first:
+      213: 5736470585808744825
+    second: Jellyfish_atlas_18
+  - first:
+      213: -1192809679369055824
+    second: Jellyfish_atlas_19
+  - first:
+      213: 8687199183058197556
+    second: Jellyfish_atlas_20
+  - first:
+      213: 1344445420141620546
+    second: Jellyfish_atlas_21
+  - first:
+      213: 6906618099238078224
+    second: Jellyfish_atlas_22
+  - first:
+      213: 7955154086592774078
+    second: Jellyfish_atlas_23
+  - first:
+      213: 1188369035098000959
+    second: Jellyfish_atlas_24
+  - first:
+      213: 3421103492902591268
+    second: Jellyfish_atlas_25
+  - first:
+      213: 9127452121416930001
+    second: Jellyfish_atlas_26
+  - first:
+      213: -2334231779324409787
+    second: Jellyfish_atlas_27
+  - first:
+      213: 4819840648644982847
+    second: Jellyfish_atlas_28
+  - first:
+      213: 7211059179843830319
+    second: Jellyfish_atlas_29
+  - first:
+      213: 1351232407032514038
+    second: Jellyfish_atlas_30
+  - first:
+      213: 5058948394281576172
+    second: Jellyfish_atlas_31
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Jellyfish_atlas_0
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 1624
+        width: 280
+        height: 381
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b9f65335b65c48d4b05e2e9ceafdb75
+      internalID: 1987927404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jellyfish_atlas_1
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 1624
+        width: 280
+        height: 381
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2a775b8864244c849ebdca2fa5b8598
+      internalID: 1314011813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jellyfish_atlas_2
+      rect:
+        serializedVersion: 2
+        x: 1065
+        y: 1615
+        width: 386
+        height: 390
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b7297ab4fceb470a9e4071312121fe3
+      internalID: -10364492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jellyfish_atlas_3
+      rect:
+        serializedVersion: 2
+        x: 1515
+        y: 1615
+        width: 436
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49c6983a3499f4b8ab088a6de1fa5162
+      internalID: 2013831219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jellyfish_atlas_4
+      rect:
+        serializedVersion: 2
+        x: 2019
+        y: 1591
+        width: 432
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8152dddd09f14d59a88b34bd74d9184
+      internalID: -435497622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jellyfish_atlas_5
+      rect:
+        serializedVersion: 2
+        x: 2523
+        y: 1591
+        width: 430
+        height: 406
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d500dcfcdd6d43e8ade544f1c78dc6c
+      internalID: -470749472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jellyfish_atlas_6
+      rect:
+        serializedVersion: 2
+        x: 3025
+        y: 1565
+        width: 428
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85f79c7724dd74edd996a0b97260101f
+      internalID: -1235254268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jellyfish_atlas_7
+      rect:
+        serializedVersion: 2
+        x: 3521
+        y: 1565
+        width: 436
+        height: 428
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab47d0f754578421895232f92b081b94
+      internalID: -2063428987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jellyfish_atlas_8
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 1054
+        width: 440
+        height: 439
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5163241eabcf4cb88873dfae69300c5
+      internalID: -344632870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jellyfish_atlas_9
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 1054
+        width: 432
+        height: 439
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67bbe5fbdd1134dbea09a8a99a91ceb2
+      internalID: 1892197116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jellyfish_atlas_10
+      rect:
+        serializedVersion: 2
+        x: 1025
+        y: 1079
+        width: 428
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68e5a7abd02594f888db64a6a4879e9a
+      internalID: 1619275497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jellyfish_atlas_11
+      rect:
+        serializedVersion: 2
+        x: 1523
+        y: 1079
+        width: 430
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1ef44ae46f7e430ca78847b2f1e4918
+      internalID: 354035480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jellyfish_atlas_12
+      rect:
+        serializedVersion: 2
+        x: 2025
+        y: 1081
+        width: 418
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1690cf72995148958c60a037c77ba97
+      internalID: 1048657216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jellyfish_atlas_13
+      rect:
+        serializedVersion: 2
+        x: 2543
+        y: 1081
+        width: 400
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1726d4cc94654427e91300483a257759
+      internalID: 901397137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jellyfish_atlas_14
+      rect:
+        serializedVersion: 2
+        x: 3149
+        y: 1101
+        width: 296
+        height: 408
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c863912ce2af64f83a679fb1f85e6851
+      internalID: -1535886822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jellyfish_atlas_15
+      rect:
+        serializedVersion: 2
+        x: 3683
+        y: 1101
+        width: 262
+        height: 408
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65791db0f70544d508f4415283e122cc
+      internalID: -1986648463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jellyfish_atlas_16
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 625
+        width: 280
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 000e9d29caa864106bc21ac12a5f97cc
+      internalID: -818398688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jellyfish_atlas_17
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 625
+        width: 280
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4de81c79ed1b14a629830bba6261edb9
+      internalID: -1371490586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jellyfish_atlas_18
+      rect:
+        serializedVersion: 2
+        x: 1145
+        y: 615
+        width: 306
+        height: 390
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dba0824634f8452b997e37072337ee6
+      internalID: 1721104571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jellyfish_atlas_19
+      rect:
+        serializedVersion: 2
+        x: 1515
+        y: 615
+        width: 436
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9fb247a0a5f34f2293bdd589bf83b93
+      internalID: -1622496063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jellyfish_atlas_20
+      rect:
+        serializedVersion: 2
+        x: 2019
+        y: 591
+        width: 432
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 034a1cb630b5a4721b0016a65bcf25a6
+      internalID: 113542939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jellyfish_atlas_21
+      rect:
+        serializedVersion: 2
+        x: 2523
+        y: 591
+        width: 430
+        height: 406
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b0d3e6ea3d3841bfa6819c0dba87f21
+      internalID: 1248146451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jellyfish_atlas_22
+      rect:
+        serializedVersion: 2
+        x: 3043
+        y: 565
+        width: 410
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd978bb7a56d846859688c13636a1e2b
+      internalID: -93396132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jellyfish_atlas_23
+      rect:
+        serializedVersion: 2
+        x: 3615
+        y: 565
+        width: 342
+        height: 428
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8e2f49cbe99b4da4854f3960d82d13f
+      internalID: 1967493836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jellyfish_atlas_24
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 54
+        width: 330
+        height: 439
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 255ee321e93be40428697a30f452d402
+      internalID: 1323375649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jellyfish_atlas_25
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 54
+        width: 330
+        height: 439
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b5e9b43c0fbc430d8dc9ed204d107db
+      internalID: 1183371498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jellyfish_atlas_26
+      rect:
+        serializedVersion: 2
+        x: 1065
+        y: 79
+        width: 388
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23572b6bbba624c8cbf46c130f0d58bb
+      internalID: 988967997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jellyfish_atlas_27
+      rect:
+        serializedVersion: 2
+        x: 1515
+        y: 79
+        width: 438
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ef994b0eceb14616b4d5e2cd85586fb
+      internalID: -1183892776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jellyfish_atlas_28
+      rect:
+        serializedVersion: 2
+        x: 2019
+        y: 81
+        width: 424
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 655f4125829c14fac84cd92ae9b680f0
+      internalID: 67506772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jellyfish_atlas_29
+      rect:
+        serializedVersion: 2
+        x: 2523
+        y: 81
+        width: 420
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b00ac50728d544e16a8db5d230cc4856
+      internalID: -1340636864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jellyfish_atlas_30
+      rect:
+        serializedVersion: 2
+        x: 3043
+        y: 101
+        width: 402
+        height: 408
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa75fbf2c07b14b398085a15455ce6c4
+      internalID: 1019010550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jellyfish_atlas_31
+      rect:
+        serializedVersion: 2
+        x: 3649
+        y: 101
+        width: 296
+        height: 408
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dbb32c347b9541d399abfbd7e76de60
+      internalID: 1445776736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 4e69aa38631d84a309b30e185d32b0ec
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Jellyfish_atlas_0: 1987927404
+      Jellyfish_atlas_1: 1314011813
+      Jellyfish_atlas_10: 1619275497
+      Jellyfish_atlas_11: 354035480
+      Jellyfish_atlas_12: 1048657216
+      Jellyfish_atlas_13: 901397137
+      Jellyfish_atlas_14: -1535886822
+      Jellyfish_atlas_15: -1986648463
+      Jellyfish_atlas_16: -818398688
+      Jellyfish_atlas_17: -1371490586
+      Jellyfish_atlas_18: 1721104571
+      Jellyfish_atlas_19: -1622496063
+      Jellyfish_atlas_2: -10364492
+      Jellyfish_atlas_20: 113542939
+      Jellyfish_atlas_21: 1248146451
+      Jellyfish_atlas_22: -93396132
+      Jellyfish_atlas_23: 1967493836
+      Jellyfish_atlas_24: 1323375649
+      Jellyfish_atlas_25: 1183371498
+      Jellyfish_atlas_26: 988967997
+      Jellyfish_atlas_27: -1183892776
+      Jellyfish_atlas_28: 67506772
+      Jellyfish_atlas_29: -1340636864
+      Jellyfish_atlas_3: 2013831219
+      Jellyfish_atlas_30: 1019010550
+      Jellyfish_atlas_31: 1445776736
+      Jellyfish_atlas_4: -435497622
+      Jellyfish_atlas_5: -470749472
+      Jellyfish_atlas_6: -1235254268
+      Jellyfish_atlas_7: -2063428987
+      Jellyfish_atlas_8: -344632870
+      Jellyfish_atlas_9: 1892197116
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

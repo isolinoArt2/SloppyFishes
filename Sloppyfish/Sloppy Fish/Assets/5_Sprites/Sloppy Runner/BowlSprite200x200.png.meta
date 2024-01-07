@@ -1,0 +1,1196 @@
+fileFormatVersion: 2
+guid: 1a2b6f97f82c24f8cbe83ab13b64f420
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3822512572358510866
+    second: BowlSprite200x200_0
+  - first:
+      213: -3763346465525890925
+    second: BowlSprite200x200_1
+  - first:
+      213: 3929961401144111616
+    second: BowlSprite200x200_2
+  - first:
+      213: 2093213708653607154
+    second: BowlSprite200x200_3
+  - first:
+      213: -2509392130769818395
+    second: BowlSprite200x200_4
+  - first:
+      213: -13027215435434264
+    second: BowlSprite200x200_5
+  - first:
+      213: 9081925873349931654
+    second: BowlSprite200x200_6
+  - first:
+      213: 304634493218816442
+    second: BowlSprite200x200_7
+  - first:
+      213: -499666686519137067
+    second: BowlSprite200x200_8
+  - first:
+      213: -1540142085140732624
+    second: BowlSprite200x200_9
+  - first:
+      213: -4737944853826706142
+    second: BowlSprite200x200_10
+  - first:
+      213: 7161193199231726179
+    second: BowlSprite200x200_11
+  - first:
+      213: 9206565729424788473
+    second: BowlSprite200x200_12
+  - first:
+      213: -6851750900658970318
+    second: BowlSprite200x200_13
+  - first:
+      213: 4685098674387687692
+    second: BowlSprite200x200_14
+  - first:
+      213: 1985475976621677342
+    second: BowlSprite200x200_15
+  - first:
+      213: 629851158400477755
+    second: BowlSprite200x200_16
+  - first:
+      213: -5334884821258140509
+    second: BowlSprite200x200_17
+  - first:
+      213: -8791796950589408137
+    second: BowlSprite200x200_18
+  - first:
+      213: -3799441353133233941
+    second: BowlSprite200x200_19
+  - first:
+      213: 8749435464618378645
+    second: BowlSprite200x200_20
+  - first:
+      213: -7303095548083323353
+    second: BowlSprite200x200_21
+  - first:
+      213: 6042198933610168841
+    second: BowlSprite200x200_22
+  - first:
+      213: 8200306843424013542
+    second: BowlSprite200x200_23
+  - first:
+      213: 2096246891769581954
+    second: BowlSprite200x200_24
+  - first:
+      213: 2324980446711648116
+    second: BowlSprite200x200_25
+  - first:
+      213: -4533533915368390716
+    second: BowlSprite200x200_26
+  - first:
+      213: 3525108938177263038
+    second: BowlSprite200x200_27
+  - first:
+      213: -7635479715124245541
+    second: BowlSprite200x200_28
+  - first:
+      213: -6323146033052504834
+    second: BowlSprite200x200_29
+  - first:
+      213: -7395908295900550969
+    second: BowlSprite200x200_30
+  - first:
+      213: 4063895572197234879
+    second: BowlSprite200x200_31
+  - first:
+      213: 3689432103568748695
+    second: BowlSprite200x200_32
+  - first:
+      213: -6587234860659411462
+    second: BowlSprite200x200_33
+  - first:
+      213: 1336091614448074999
+    second: BowlSprite200x200_34
+  - first:
+      213: -7814758266984520501
+    second: BowlSprite200x200_35
+  - first:
+      213: -1983641702940221427
+    second: BowlSprite200x200_36
+  - first:
+      213: -6079218810806206292
+    second: BowlSprite200x200_37
+  - first:
+      213: 3416602035684476745
+    second: BowlSprite200x200_38
+  - first:
+      213: 887312830984045335
+    second: BowlSprite200x200_39
+  - first:
+      213: -740329817905338746
+    second: BowlSprite200x200_40
+  - first:
+      213: 6971083886452747412
+    second: BowlSprite200x200_41
+  - first:
+      213: 5749670483519556095
+    second: BowlSprite200x200_42
+  - first:
+      213: 1838305096855974519
+    second: BowlSprite200x200_43
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BowlSprite200x200_0
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 842
+        width: 146
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee63b176115b3fac0800000000000000
+      internalID: -3822512572358510866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BowlSprite200x200_1
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 842
+        width: 146
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3908b932458e5cbc0800000000000000
+      internalID: -3763346465525890925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BowlSprite200x200_2
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 842
+        width: 146
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 002f03092170a8630800000000000000
+      internalID: 3929961401144111616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BowlSprite200x200_3
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 842
+        width: 146
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f8b64717c69c0d10800000000000000
+      internalID: 2093213708653607154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BowlSprite200x200_4
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 842
+        width: 146
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5eced430729dc2dd0800000000000000
+      internalID: -2509392130769818395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BowlSprite200x200_5
+      rect:
+        serializedVersion: 2
+        x: 1031
+        y: 837
+        width: 151
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e6fe8b01d7b1dff0800000000000000
+      internalID: -13027215435434264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BowlSprite200x200_6
+      rect:
+        serializedVersion: 2
+        x: 1231
+        y: 842
+        width: 146
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 682b375b67b790e70800000000000000
+      internalID: 9081925873349931654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BowlSprite200x200_7
+      rect:
+        serializedVersion: 2
+        x: 1431
+        y: 842
+        width: 146
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab183a225774a3400800000000000000
+      internalID: 304634493218816442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BowlSprite200x200_8
+      rect:
+        serializedVersion: 2
+        x: 1636
+        y: 847
+        width: 136
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dc2ee3cbc3d019f0800000000000000
+      internalID: -499666686519137067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BowlSprite200x200_9
+      rect:
+        serializedVersion: 2
+        x: 1832
+        y: 843
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 035ae8ffee050aae0800000000000000
+      internalID: -1540142085140732624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BowlSprite200x200_10
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 643
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 225e44612407f3eb0800000000000000
+      internalID: -4737944853826706142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BowlSprite200x200_11
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 643
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3627628e54ba16360800000000000000
+      internalID: 7161193199231726179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BowlSprite200x200_12
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 643
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fb46af90ca44cf70800000000000000
+      internalID: 9206565729424788473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BowlSprite200x200_13
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 643
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23162c4abd0b9e0a0800000000000000
+      internalID: -6851750900658970318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BowlSprite200x200_14
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 643
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c091880fb60d40140800000000000000
+      internalID: 4685098674387687692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BowlSprite200x200_15
+      rect:
+        serializedVersion: 2
+        x: 1032
+        y: 643
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1b5b9891e3dd8b10800000000000000
+      internalID: 1985475976621677342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BowlSprite200x200_16
+      rect:
+        serializedVersion: 2
+        x: 1232
+        y: 643
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3a24dd9a4eadb800800000000000000
+      internalID: 629851158400477755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BowlSprite200x200_17
+      rect:
+        serializedVersion: 2
+        x: 1432
+        y: 642
+        width: 145
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a4094f358ea6f5b0800000000000000
+      internalID: -5334884821258140509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BowlSprite200x200_18
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 643
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77c71ce11434df580800000000000000
+      internalID: -8791796950589408137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BowlSprite200x200_19
+      rect:
+        serializedVersion: 2
+        x: 1832
+        y: 643
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be86099383ca54bc0800000000000000
+      internalID: -3799441353133233941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BowlSprite200x200_20
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 443
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59588c5d23d3c6970800000000000000
+      internalID: 8749435464618378645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BowlSprite200x200_21
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 443
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72eb1cfda4136aa90800000000000000
+      internalID: -7303095548083323353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BowlSprite200x200_22
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 443
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 902041ccae33ad350800000000000000
+      internalID: 6042198933610168841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BowlSprite200x200_23
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 443
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ec3e7380a75dc170800000000000000
+      internalID: 8200306843424013542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BowlSprite200x200_24
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 493
+        width: 89
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2815171117d571d10800000000000000
+      internalID: 2096246891769581954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BowlSprite200x200_25
+      rect:
+        serializedVersion: 2
+        x: 1081
+        y: 497
+        width: 47
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47f0af3e56df34020800000000000000
+      internalID: 2324980446711648116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BowlSprite200x200_26
+      rect:
+        serializedVersion: 2
+        x: 1259
+        y: 480
+        width: 94
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cff7457ce6a511c0800000000000000
+      internalID: -4533533915368390716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BowlSprite200x200_27
+      rect:
+        serializedVersion: 2
+        x: 1327
+        y: 527
+        width: 12
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb53c9607e3bbe030800000000000000
+      internalID: 3525108938177263038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BowlSprite200x200_28
+      rect:
+        serializedVersion: 2
+        x: 1472
+        y: 466
+        width: 76
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdb815257a3590690800000000000000
+      internalID: -7635479715124245541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BowlSprite200x200_29
+      rect:
+        serializedVersion: 2
+        x: 1656
+        y: 492
+        width: 81
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efc2cf43f2caf38a0800000000000000
+      internalID: -6323146033052504834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BowlSprite200x200_30
+      rect:
+        serializedVersion: 2
+        x: 1856
+        y: 492
+        width: 81
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c8ab7f07947c5990800000000000000
+      internalID: -7395908295900550969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BowlSprite200x200_31
+      rect:
+        serializedVersion: 2
+        x: 1303
+        y: 481
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb85911dd7bd56830800000000000000
+      internalID: 4063895572197234879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BowlSprite200x200_32
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 288
+        width: 101
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 790332463fe733330800000000000000
+      internalID: 3689432103568748695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BowlSprite200x200_33
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 279
+        width: 42
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af5735e7bc07594a0800000000000000
+      internalID: -6587234860659411462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BowlSprite200x200_34
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 262
+        width: 101
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f04e829e30ca8210800000000000000
+      internalID: 1336091614448074999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BowlSprite200x200_35
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 286
+        width: 73
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc427d2b2c66c8390800000000000000
+      internalID: -7814758266984520501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BowlSprite200x200_36
+      rect:
+        serializedVersion: 2
+        x: 853
+        y: 277
+        width: 97
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d00e8968160b874e0800000000000000
+      internalID: -1983641702940221427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BowlSprite200x200_37
+      rect:
+        serializedVersion: 2
+        x: 1055
+        y: 276
+        width: 105
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca0060e53b642aba0800000000000000
+      internalID: -6079218810806206292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BowlSprite200x200_38
+      rect:
+        serializedVersion: 2
+        x: 1255
+        y: 276
+        width: 105
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94789d313753a6f20800000000000000
+      internalID: 3416602035684476745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BowlSprite200x200_39
+      rect:
+        serializedVersion: 2
+        x: 1457
+        y: 292
+        width: 97
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 713437f815e505c00800000000000000
+      internalID: 887312830984045335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BowlSprite200x200_40
+      rect:
+        serializedVersion: 2
+        x: 1668
+        y: 282
+        width: 76
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6866f1bf3f1d9b5f0800000000000000
+      internalID: -740329817905338746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BowlSprite200x200_41
+      rect:
+        serializedVersion: 2
+        x: 1866
+        y: 290
+        width: 69
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49c277f3cd34eb060800000000000000
+      internalID: 6971083886452747412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BowlSprite200x200_42
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 79
+        width: 84
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff94bb977deeacf40800000000000000
+      internalID: 5749670483519556095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BowlSprite200x200_43
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 87
+        width: 89
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 772f3eeeeb8f28910800000000000000
+      internalID: 1838305096855974519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
