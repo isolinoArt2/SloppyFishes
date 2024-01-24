@@ -6,8 +6,8 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public Player player;
-    public GameObject _player;
+    //private Player player;
+    private GameObject player;
     public Text scoreText;
     public GameObject _scoreTextObj;
     public GameObject playButton;
@@ -17,11 +17,11 @@ public class GameManager : MonoBehaviour
     public GameObject title;
     public GameObject startui;
     private int score = 0;
-    public Spawner _spawner;
+    //public Spawner _spawner;
     public GameObject soundMute;
-    public GameObject spawnerObjt;
+  //  public GameObject spawnerObjt;
 
-    public GameObject datamanager;
+    //public GameObject datamanager;
 
     public GameObject animatedBtn;
     public AnimationClip animatedBtn_clip;
@@ -38,35 +38,63 @@ public class GameManager : MonoBehaviour
 
     private int _coins = 0;
     public TextMeshProUGUI coinsText;
+    public static GameManager instance;
+
+    
 
     private void Awake()
     {
+        // Asegurar que solo haya una instancia de DataManager en el juego
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
         Application.targetFrameRate = 60;
         gameOver.SetActive(false);
         startui.SetActive(true);
         title.SetActive(true);
-        Pause();
-        _player.SetActive(false);
+       // Pause();
+        //_player.SetActive(false);
         Time.timeScale = 1f;
-        spawnerObjt.SetActive(false);
+      //  spawnerObjt.SetActive(false);
     }
     [System.Obsolete]
     private void Start()
     {
         FindObjectOfType<AudioManager>().Play("music");
         FindObjectOfType<AudioManager>().Play("title");
+        // Buscar el objeto del jugador por etiqueta
+        player = GameObject.FindGameObjectWithTag("Player");
+
+        if (player != null)
+        {
+            // Acceder a los componentes del jugador si es necesario
+            Player playerComponent = player.GetComponent<Player>();
+            // Resto del código...
+        }
+        else
+        {
+            return;
+          //  Debug.LogError("No se encontró el objeto del jugador.");
+        }
         //highscore = PlayerPrefs.GetInt("highScore");
     }
 
     [System.Obsolete]
     public void Play()
     {
-        spawnerObjt.SetActive(true);
-       
+       // spawnerObjt.SetActive(true);
+      // 
 
         Time.timeScale = 1f;
-        player.enabled = true;
+      //  player.enabled = true;
 
+        /*
        
         Mines[] Mines = FindObjectsOfType<Mines>();
 
@@ -74,14 +102,14 @@ public class GameManager : MonoBehaviour
         {
             Destroy(Mines[i].gameObject);
         }
-        
+        */
     }
 
     public void CoinsInGame()
     {
         // Sumar 1 a la variable _coins
         _coins++;
-        Debug.Log("Coins collected: " + _coins);
+       
     }
 
     private void Update()
@@ -126,18 +154,30 @@ public class GameManager : MonoBehaviour
   //  [System.Obsolete]
     public void RestartHome()
     {
+        /*
         Mines[] Mines = FindObjectsOfType<Mines>();
 
         for (int i = 0; i < Mines.Length; i++)
         {
             Destroy(Mines[i].gameObject);
         }
+        */
     }
 
     public void Pause()
     {
         Time.timeScale = 0f;
-      player.enabled = false;
+        //player.enabled = false;
+        player = GameObject.FindGameObjectWithTag("Player");
+
+        if (player != null)
+        {
+            // Acceder a los componentes del jugador si es necesario
+            Player playerComponent = player.GetComponent<Player>();
+            // Resto del código...
+            player.SetActive(false);
+        }
+       
         _scoreTextObj.SetActive(false);
        
     }
@@ -148,7 +188,8 @@ public class GameManager : MonoBehaviour
         isPaused = true;
         timer = 3.0f;
         timerText.gameObject.SetActive(true);
-        player.enabled = true;
+        // player.enabled = true;
+        player.SetActive(true);
         _scoreTextObj.SetActive(true);
         
     }
@@ -157,20 +198,22 @@ public class GameManager : MonoBehaviour
     {
         timerText.gameObject.SetActive(false);
         Time.timeScale = 1f;
-       player.enabled = true;
+      // player.enabled = true;
+        player.SetActive(true);
         _scoreTextObj.SetActive(true);
     }
 
     [System.Obsolete]
     public void GameOver()
     {
+        
         Mines[] Mines = FindObjectsOfType<Mines>();
 
         for (int i = 0; i < Mines.Length; i++)
         {
             Destroy(Mines[i].gameObject);
         }
-
+        
         highscore = PlayerPrefs.GetInt("highScore");
         if (PlayerPrefs.GetInt("score") > highscore)
         {
@@ -198,7 +241,7 @@ public class GameManager : MonoBehaviour
        
       //  playButton.SetActive(true);
       //  leaderButton.SetActive(true);
-        _spawner.GetComponent<Spawner>().ResetTimer();
+      //  _spawner.GetComponent<Spawner>().ResetTimer();
         FindObjectOfType<AudioManager>().Play("gameover");
         //soundMute.SetActive(true);
        

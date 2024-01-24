@@ -7,6 +7,7 @@ public class Coins : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            Player playerScript = other.GetComponent<Player>();
             // Obtener una referencia al GameManager
             GameManager gameManager = FindObjectOfType<GameManager>();
             FindObjectOfType<AudioManager>().Play("coins");
@@ -17,8 +18,18 @@ public class Coins : MonoBehaviour
                 gameManager.CoinsInGame();
             }
 
+            if (playerScript != null)
+            {
+                //  StartCoroutine(TriggerSlowMotion());
+                playerScript.CoinsInGame();
+               
+            }
+
             // Destruir la moneda después de ser recogida
             Destroy(gameObject);
         }
+
+       
+
     }
 }

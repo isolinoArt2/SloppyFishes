@@ -10,10 +10,21 @@ public class initializeUnityAds : MonoBehaviour, IUnityAdsInitializationListener
 
     public bool isTestingMode = true;
 
+    public static initializeUnityAds instance;
     string gameId;
 
     void Awake()
     {
+        // Asegurar que solo haya una instancia de DataManager en el juego
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
         InitializeAds();
     }
 

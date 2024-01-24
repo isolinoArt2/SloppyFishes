@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2415426506485189385
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1755222199257180200}
+  - component: {fileID: 69081290920107345}
+  m_Layer: 0
+  m_Name: ---AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1755222199257180200
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2415426506485189385}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 913.2505, y: 1061.8298, z: 22.507856}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &69081290920107345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2415426506485189385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd9e7b0b4f69843a482c74f62eefe5b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: gameover
+    clip: {fileID: 8300000, guid: 8884d076799016844adc17156d4676f8, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+    mixer: {fileID: 24100000, guid: 7a1a3ce1a668c4ba094741556f967626, type: 2}
+  - name: jump
+    clip: {fileID: 8300000, guid: 266b339a46da92d49881c711d5778df2, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+    mixer: {fileID: 24100000, guid: 7a1a3ce1a668c4ba094741556f967626, type: 2}
+  - name: music
+    clip: {fileID: 8300000, guid: 513197e4ea0798a4aa5c273b234bf22b, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+    loop: 1
+    mixer: {fileID: 24100000, guid: 7a1a3ce1a668c4ba094741556f967626, type: 2}
+  - name: title
+    clip: {fileID: 8300000, guid: c0b5eff9d8cabbc459cfdcf6da97b53b, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+    mixer: {fileID: 24100000, guid: 7a1a3ce1a668c4ba094741556f967626, type: 2}
+  - name: click
+    clip: {fileID: 8300000, guid: 4dabd5acd3d6141d7a975c511b6aa6aa, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+    mixer: {fileID: 24100000, guid: 7a1a3ce1a668c4ba094741556f967626, type: 2}
+  - name: coins
+    clip: {fileID: 8300000, guid: 973f1ae4389e1445eaec9e5fb78eb3b9, type: 3}
+    volume: 0.17
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+    mixer: {fileID: 24100000, guid: 7a1a3ce1a668c4ba094741556f967626, type: 2}
+  _mixer: {fileID: 24100000, guid: 7a1a3ce1a668c4ba094741556f967626, type: 2}

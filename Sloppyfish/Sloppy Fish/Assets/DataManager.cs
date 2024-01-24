@@ -18,6 +18,7 @@ using TMPro;
 using System.Linq;
 using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UIElements;
+using Unity.VisualScripting;
 
 public class DataManager : MonoBehaviour
 {
@@ -27,8 +28,8 @@ public class DataManager : MonoBehaviour
     private string _userId;
     private int _yourhighscore;
 
-    public GameObject LoadingScreen;
-    public GameObject Gamemanager;
+   // public GameObject LoadingScreen;
+  //public GameObject Gamemanager;
     // public GameObject errorsText;
     string authCode;
 
@@ -70,17 +71,29 @@ public class DataManager : MonoBehaviour
     public GameObject _gameVersionPanel;
     public GameObject startUI;
 
-     private Text nameLbl, Highscorelbl;
+    private Text nameLbl, Highscorelbl;
+
+    // La única instancia válida de DataManager
+    public static DataManager instance;
+
     private void Awake()
     {
-        LoadingScreen.SetActive(true);
-       // LoadData();
+        // Asegurar que solo haya una instancia de DataManager en el juego
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        DontDestroyOnLoad(this.gameObject);
+       // DontDestroyOnLoad(this.gameObject);
         isConnected = false;
         PlayGamesPlatform.Activate();
         GPGSLogin();
@@ -350,9 +363,9 @@ public class DataManager : MonoBehaviour
 
         // Asegúrate de que el Slider esté en 1 al finalizar la conexión
         connectionSlider.value = 1f;
-        StartCoroutine(LoadScene());
+       // StartCoroutine(LoadScene());
     }
-
+    /*
     IEnumerator LoadScene()
     {
 
@@ -362,6 +375,7 @@ public class DataManager : MonoBehaviour
         Gamemanager.SetActive(true);
         yield return null;
     }
+    */
     public void LoadLeaderboard()
     {
         if (isConnected)
@@ -568,7 +582,7 @@ public class DataManager : MonoBehaviour
 
     public void ConnectWithNoUser()
     {
-        StartCoroutine(LoadScene());
+      //  StartCoroutine(LoadScene());
     }
 
 }

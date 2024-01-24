@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3766364541169352782}
   - component: {fileID: 441031806665860261}
   - component: {fileID: 803278266524644729}
+  - component: {fileID: 6359452996943387825}
   m_Layer: 0
   m_Name: PufferEnemy_0 (1)
   m_TagString: Mines
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 4981456491839118003}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.4654374, y: 0.21000004, z: 0.016210109}
+  m_LocalPosition: {x: 0.0845626, y: 0.21000004, z: 0.016210109}
   m_LocalScale: {x: 2.0076, y: 2.0076, z: 2.0076}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -146,6 +147,19 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: -0.02601391, y: -0.03651169}
   m_Radius: 0.27662355
+--- !u!114 &6359452996943387825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4981456491839118003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff865f495b4e57b489cdb73654890b71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parent: {fileID: 5527150967764739888}
 --- !u!1 &5527150967764739888
 GameObject:
   m_ObjectHideFlags: 0
@@ -155,7 +169,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3191154168807316140}
-  - component: {fileID: 496253488940441443}
+  - component: {fileID: 7200773982081237023}
   m_Layer: 0
   m_Name: Puffers
   m_TagString: Untagged
@@ -172,7 +186,7 @@ Transform:
   m_GameObject: {fileID: 5527150967764739888}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.6121341, y: -1.4109309, z: -0.016210109}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -182,19 +196,33 @@ Transform:
   - {fileID: 1136225736715777144}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &496253488940441443
-MonoBehaviour:
+--- !u!50 &7200773982081237023
+Rigidbody2D:
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5527150967764739888}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff865f495b4e57b489cdb73654890b71, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 2.3
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &7208879791051096770
 GameObject:
   m_ObjectHideFlags: 0
@@ -207,6 +235,7 @@ GameObject:
   - component: {fileID: 7584654246339658978}
   - component: {fileID: 5917842568778231222}
   - component: {fileID: 3268339205453427885}
+  - component: {fileID: 8874145535039209188}
   m_Layer: 0
   m_Name: PufferEnemy_0 (2)
   m_TagString: Mines
@@ -223,7 +252,7 @@ Transform:
   m_GameObject: {fileID: 7208879791051096770}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.4654374, y: 3.12, z: 0.016210109}
+  m_LocalPosition: {x: 0.0845626, y: 3.12, z: 0.016210109}
   m_LocalScale: {x: 2.0076, y: 2.0076, z: 2.0076}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -341,6 +370,19 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: -0.02601391, y: -0.03651169}
   m_Radius: 0.27662355
+--- !u!114 &8874145535039209188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7208879791051096770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff865f495b4e57b489cdb73654890b71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parent: {fileID: 5527150967764739888}
 --- !u!1 &9000830409282679323
 GameObject:
   m_ObjectHideFlags: 0
@@ -353,6 +395,7 @@ GameObject:
   - component: {fileID: 413597516455549835}
   - component: {fileID: 7665324500756379665}
   - component: {fileID: 5652799043746838072}
+  - component: {fileID: 5030886077841895806}
   m_Layer: 0
   m_Name: PufferEnemy_0
   m_TagString: Mines
@@ -369,7 +412,7 @@ Transform:
   m_GameObject: {fileID: 9000830409282679323}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.4654374, y: -2.9, z: 0.016210109}
+  m_LocalPosition: {x: 0.0845626, y: -2.9, z: 0.016210109}
   m_LocalScale: {x: 2.0076, y: 2.0076, z: 2.0076}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -487,6 +530,19 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: -0.02601391, y: -0.03651169}
   m_Radius: 0.27662355
+--- !u!114 &5030886077841895806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9000830409282679323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff865f495b4e57b489cdb73654890b71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parent: {fileID: 5527150967764739888}
 --- !u!1001 &5805281538586624319
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -495,9 +551,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3191154168807316140}
     m_Modifications:
+    - target: {fileID: 53954534494909358, guid: 0f612776bf5e94ec9894ae4517ae6c0a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6869167578398291271, guid: 0f612776bf5e94ec9894ae4517ae6c0a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.55
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6869167578398291271, guid: 0f612776bf5e94ec9894ae4517ae6c0a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -538,6 +598,10 @@ PrefabInstance:
     - target: {fileID: 8598166294517429407, guid: 0f612776bf5e94ec9894ae4517ae6c0a, type: 3}
       propertyPath: m_Name
       value: Scoring
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598166294517429407, guid: 0f612776bf5e94ec9894ae4517ae6c0a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

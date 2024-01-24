@@ -12,9 +12,9 @@ public class SettingMenu : MonoBehaviour
 
     private void Start()
     {
-        float value;
-        mixer.GetFloat("Volume", out value);
-        volumSlider.value = value;
+        //float value;
+      //  mixer.GetFloat("Volume", out value);
+       // volumSlider.value = value;
 
 
     }

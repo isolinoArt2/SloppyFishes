@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
+using GooglePlayGames.BasicApi;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -17,12 +19,13 @@ public class Player : MonoBehaviour
 
     //[SerializeField] private AudioSource jumpSoundEffect;
 
-    public GameManager gameManager; // Reference to the GameManager
-    public DataManager dataManager;
+    private GameManager gameManager; // Reference to the GameManager
+   // public DataManager dataManager;
 
-    public float dashCooldown = 3f;
+    public float dashCooldown = 1f;
     public float dashDuration = 0.5f; public float dashSpeedMultiplier = 2f;  // Ajusta esto según sea necesario
-   
+    public float backdashDuration = 0.5f; public float backdashSpeedMultiplier = 2f;  // Ajusta esto según sea necesario
+
     public GameObject dashFeedbackObject;
 
     private bool isCooldown = false;
@@ -30,6 +33,26 @@ public class Player : MonoBehaviour
     private float dashTimer = 0f;
     private bool isDashActive = false;
 
+    public bool bowlIsActive;
+    private bool desactiveBowl = false;
+    private GameObject bowlInstance; // Variable para almacenar la instancia del bowl
+
+    public CinemachineVirtualCamera virtualCamera;
+    public float slowMotionDuration = 1.5f; // Duración de la cámara lenta en segundos
+    public float slowMotionTimeScale = 0.25f; // Escala de tiempo durante la cámara lenta
+    public float targetOrthoSize = 3f;
+    public float returnDuration = 1f;
+    public float zoomInDuration = 0.1f;
+    public float zoomOutDuration = 0.1f;
+
+    private GameObject canvas;
+    public int _StarsUnlocked = 1;
+
+    private int _coinsOnLevel;
+    private int _coins = 0;
+
+    // Añadir una variable para controlar la dirección del movimiento
+    private int movementDirection = 1; // 1 para derecha, -1 para izquierda
 
     private void Awake()
     {
@@ -39,120 +62,184 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-      //  InvokeRepeating(nameof(AnimateSprite), 0.15f, 0.15f);
+        gameManager = GameManager.instance;
+        Debug.Log("cantidad de stars unlocked at start = " + _StarsUnlocked);
+        //  InvokeRepeating(nameof(AnimateSprite), 0.15f, 0.15f);
+        _StarsUnlocked = 1;
+        _coins = 0;
     }
 
     public void OnPlay()
     {
+        /*
         Vector3 position = transform.position;
        position.y = 0f;
         transform.position = position;
         direction = Vector3.zero;
-
+        */
+       // gravity = -13;
     }
 
-
-    private void Update()
+    public void GetStars(int _star)
     {
-        // Movimiento constante hacia la derecha
-        if (!isDashActive)
+        _StarsUnlocked += _star;
+    }
+    public void GetCoinsOnLevel(int _lvlCoins)
+    {
+        _coinsOnLevel = _lvlCoins;
+    }
+    public void CoinsInGame()
+    {
+        // Sumar 1 a la variable _coins
+        _coins++;
+        if (_coins >= _coinsOnLevel)
+            _StarsUnlocked ++;
+    }
+    public void OpenDoor()
+    {
+     
+        if (PlayerPrefs.GetInt("Boots") >= 1)
         {
-            transform.position += Vector3.right * moveSpeed * Time.deltaTime;
+            _StarsUnlocked += 1;
         }
 
-        // Manejar el cooldown del dash
-        if (isCooldown)
+        canvas = GameObject.FindGameObjectWithTag("Canvas");
+        if (canvas != null)
         {
-            dashCooldownTimer += Time.deltaTime;
+            Debug.Log("cantidad de stars unlocked = " + _StarsUnlocked);
+            // Acceder a los componentes del jugador si es necesario
+            LevelComplete canvasComponent = canvas.GetComponent<LevelComplete>();
+            canvasComponent.OnLevelComplete(_StarsUnlocked);
+            
+        }
+        else
+        {
+            return;
+            //  Debug.LogError("No se encontró el objeto del jugador.");
+        }
+    }
 
-            if (dashCooldownTimer >= dashCooldown)
+    public CinemachineVirtualCamera GetVirtualCamera()
+    {
+        // Aquí, asumimos que la cámara virtual está directamente en el objeto Player.
+        // Si está en otro lugar, necesitarás ajustar esto en consecuencia.
+        return GetComponentInChildren<CinemachineVirtualCamera>();
+    }
+
+   
+
+    public void GetItem(GameObject itemPrefab)
+    {
+        StartCoroutine(TriggerSlowMotion(itemPrefab));
+       
+        // Puedes agregar más lógica aquí, como cambiar el comportamiento del objeto recolectado, actualizar puntuaciones, etc.
+    }
+   
+    IEnumerator TriggerSlowMotion(GameObject itemPrefab)
+    {
+        if (virtualCamera == null)
+        {
+            Debug.LogError("Virtual camera is not assigned.");
+            yield break;
+        }
+
+        // Obtén el componente CinemachineFramingTransposer
+        CinemachineComponentBase componentBase = virtualCamera.GetCinemachineComponent(CinemachineCore.Stage.Body);
+        if (componentBase is CinemachineFramingTransposer)
+        {
+            // Guarda el valor original de la distancia de la cámara
+            float originalCameraDistance = (componentBase as CinemachineFramingTransposer).m_CameraDistance;
+
+            // Establece el valor de la distancia de la cámara para el zoom in
+            (componentBase as CinemachineFramingTransposer).m_CameraDistance = 0.5f;
+
+            // Ajustar la escala de tiempo para la desaceleración general del tiempo
+            Time.timeScale = slowMotionTimeScale;
+
+            // Zoom In suave
+            float elapsedTime = 0f;
+            while (elapsedTime < zoomInDuration)
             {
-                isCooldown = false;
-                dashCooldownTimer = 0f;
+                // Interpola suavemente entre el valor original y 1 usando SmoothStep
+                float smoothStepValue = Mathf.SmoothStep(0f, 1f, elapsedTime / zoomInDuration);
+                float newCameraDistance = Mathf.Lerp(originalCameraDistance, 1, smoothStepValue);
 
-                // Activar el feedback de dash disponible
-                if (dashFeedbackObject != null)
-                    dashFeedbackObject.SetActive(true);
+                // Establece el nuevo valor de la distancia de la cámara
+                (componentBase as CinemachineFramingTransposer).m_CameraDistance = newCameraDistance;
+
+                elapsedTime += Time.unscaledDeltaTime;
+                yield return null;
             }
-        }
-        // Manejar la entrada para el dash
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            // Iniciar el dash solo si no estamos en cooldown
-            if (!isCooldown)
+
+            // Pausar el tiempo
+            Time.timeScale = 0;
+            // Pausa adicional después de recoger el objeto
+            yield return new WaitForSecondsRealtime(0.5f);
+
+            // Obtener el prefab y activar la cámara lenta si es necesario
+            if (itemPrefab.CompareTag("Bowl"))
             {
-                StartCoroutine(Dash());
+                // Instanciar el objeto recolectado como hijo del jugador y almacenar la instancia en bowlInstance
+                bowlInstance = Instantiate(itemPrefab, transform.position, Quaternion.identity);
+                bowlInstance.transform.SetParent(transform);
+                bowlIsActive = true;
             }
-        }
+            else
+            {
+                // Instanciar el objeto recolectado como hijo del jugador
+                GameObject collectedItem = Instantiate(itemPrefab, transform.position, Quaternion.identity);
+                collectedItem.transform.SetParent(transform);
 
-        // Manejar la entrada para el salto
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+                // Puedes agregar más lógica aquí, como cambiar el comportamiento del objeto recolectado, actualizar puntuaciones, etc.
+            }
+
+            // Pausa adicional después de recoger el objeto
+            yield return new WaitForSecondsRealtime(0.5f);
+
+            // Restaura la distancia original de la cámara después del tiempo de espera
+            (componentBase as CinemachineFramingTransposer).m_CameraDistance = originalCameraDistance;
+
+            // Zoom Out
+            elapsedTime = 0f;
+            while (elapsedTime < zoomOutDuration)
+            {
+                // Puedes agregar más ajustes aquí según sea necesario
+
+                elapsedTime += Time.unscaledDeltaTime;
+                yield return null;
+            }
+
+            // Espera un breve momento después del zoom out
+            yield return new WaitForSecondsRealtime(0.5f);
+
+            // Restaurar la escala de tiempo a su valor original
+            Time.timeScale = 1;
+        }
+        else
         {
-            FindObjectOfType<AudioManager>().Play("jump");
-            direction = Vector3.up * strength;
-            BubbleSpawn();
+            Debug.LogError("CinemachineFramingTransposer component not found on the virtual camera.");
+            yield break;
         }
-
-        // Actualizar posición y gravedad
-        direction.y += gravity * Time.deltaTime;
-
-        // Solo aplicar la posición durante el dash si no estamos en dash
-        if (!isDashActive)
-        {
-            transform.position += direction * Time.deltaTime;
-        }
-
     }
+    
 
 
-    private IEnumerator Dash()
+    public void GetHit()
     {
-        // Desactivar el feedback de dash disponible
-        if (dashFeedbackObject != null)
-            dashFeedbackObject.SetActive(false);
-
-        // Iniciar el dash
-        isDashActive = true;
-        float startTime = Time.time;
-        while (Time.time < startTime + dashDuration)
-        {
-            // Aplicar la velocidad de dash en el eje X
-            transform.Translate(Vector3.right * moveSpeed * dashSpeedMultiplier * Time.deltaTime);
-
-            // No modificar la posición en y durante el dash
-            yield return null;
-        }
-
-        // Finalizar el dash
-        isDashActive = false;
-
-        // Iniciar el cooldown
-        isCooldown = true;
-        dashCooldownTimer = 0f;
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("Obstacle"))
+        if (!bowlIsActive)
         {
            // Transform obstacleParent = other.transform.parent; // Obtén la referencia al objeto padre
-           // Destroy(obstacleParent.transform.gameObject);
+          //  Destroy(obstacleParent.transform.gameObject);
             gameManager.GameOver(); // Call the GameManager's GameOver method through the reference
-            OnPlay();
         }
-        else if (other.gameObject.CompareTag("Scoring"))
+        else
         {
-            //gameManager.IncreaseScore(); // Call the GameManager's IncreaseScore method through the reference
-            // dataManager.IncreaseScore(1);
-            dataManager.SendMessage("IncreaseScore", 1);
-        }
-        else if (other.gameObject.CompareTag("Mines"))
-        {
-            Transform obstacleParent = other.transform.parent; // Obtén la referencia al objeto padre
-            Destroy(obstacleParent.transform.gameObject);
-            gameManager.GameOver(); // Call the GameManager's GameOver method through the reference
+            //StartCoroutine(DamashBackDash());
+            bowlIsActive = false;
+            _StarsUnlocked -= 1;
         }
     }
+
 
     public void BubbleSpawn()
     {

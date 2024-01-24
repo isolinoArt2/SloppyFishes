@@ -15,12 +15,15 @@ public class AudioManager : MonoBehaviour
 
     private void Awake()
     {
+        // Asegurar que solo haya una instancia de DataManager en el juego
         if (instance == null)
+        {
             instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
         else
         {
             Destroy(gameObject);
-            return;
         }
 
         // DontDestroyOnLoad(gameObject);

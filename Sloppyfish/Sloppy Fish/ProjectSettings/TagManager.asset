@@ -8,14 +8,19 @@ TagManager:
   - Scoring
   - destroyWall
   - Mines
+  - Coin
+  - Bowl
+  - Weapon
+  - Canvas
+  - Boot
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Limits
   - Water
   - UI
-  - 
+  - ForeGround
   - 
   - 
   - 
@@ -44,4 +49,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 746108415
+    locked: 0
+  - name: ForeGroundSorting
+    uniqueID: 2701821635
+    locked: 0
+  - name: FG_Lit
+    uniqueID: 4019625603
+    locked: 0
+  - name: FG Unfocus
+    uniqueID: 3871600617
     locked: 0
